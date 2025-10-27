@@ -59,6 +59,7 @@ body{
     font-size: medium;
     width: 250px;
     font-style:initial;
+    border: none;
 }
 .block2{
     height: 800px;
@@ -85,11 +86,28 @@ body{
     margin-top: 10px;
 }
 .block3{
-    height: 800px;
+    height: 400px;
     width: 100%;
     background: rgb(4, 4, 53);
     color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
 }
-.block3-1{
-   
+.block3-c{
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    color: black;
+    padding: 20px;
+}
+.block3-c h6{
+    font-size: 25px;
+    margin: 0;
+}
+.block3-c p{
+    font-size: 20px;
+    margin-top: 10px;
 }
