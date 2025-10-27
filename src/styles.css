@@ -1,0 +1,95 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+:root{
+    --shadow: 0 8px 30px rgba(16,34,40,0.08);
+}
+.header{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+
+}
+
+.nav{
+    display: flex;
+}
+
+.right-nav{
+    display:flex;
+    margin-left: auto;
+    gap:10px;
+    margin-top: 15px;
+}
+.right-nav input{
+    border-radius: 25px;
+    width: 400px;
+    height: 40px;
+    font-size: large;
+}
+.block1{
+    height: 650px;
+    width: 100%;
+    background: linear-gradient(135deg,rgb(41, 6, 97),rgb(128, 24, 160));
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.block1-container{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    color: white;
+    background: linear-gradient(135deg,rgba(111, 53, 119, 0.842),rgb(56, 32, 124));
+    width: 85%;
+    height: 400px;
+    padding: 40px;
+}
+.btn-block1{
+    color: white;
+    padding: 15px;
+    background: rgb(30, 5, 53);
+    border-radius: 25px;
+    font-size: medium;
+    width: 250px;
+    font-style:initial;
+}
+.block2{
+    height: 800px;
+    width: 100%;
+    margin: 100px;
+}
+.block2-0{
+    display: flex;
+    margin-left: 130px ;
+    margin-right: 200px;
+}
+.block2-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+}
+.block2-1 h6{
+    font-size: 50px;
+    margin: 0;
+}
+.block2-1 p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.block3{
+    height: 800px;
+    width: 100%;
+    background: rgb(4, 4, 53);
+    color: white;
+}
+.block3-1{
+   
+}
