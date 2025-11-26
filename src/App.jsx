@@ -1,21 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Header from './components/Header'
-import Block1 from './components/Block1'
-import Block2 from './components/Block2'
-import Block3 from './components/Block3'
 
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import SoftwareTraining from './pages/SoftwareTraining'
+import SoftwareTechnology from './pages/SoftwareTechnology'
+import Research from './pages/Research'
+import Careers from './pages/Careers'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import TrainingTalent from './pages/TrainingTalent'
+import AcademicTraining from './pages/AcademicTraining'
+import CorporateTraining from './pages/CorporateTraining'
 
 function App() {
-  
-
   return (
     <>
      <Header />
-     <Block1 />
-     <Block2 />
-     <Block3 />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/software-training-services' element={<SoftwareTraining />} />
+          <Route path='/training-talent' element={<TrainingTalent />} />
+          <Route path='/academic-training' element={<AcademicTraining />} />
+          <Route path='/corporate-training' element={<CorporateTraining />} />
+        <Route path='/software-technology-solutions' element={<SoftwareTechnology />} />
+        <Route path='/research-development' element={<Research />} />
+        <Route path='/careers' element={<Careers />} />
+        <Route path='/aboutus' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+     
     </>
   )
 }
