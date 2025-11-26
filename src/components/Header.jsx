@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+
 export default function Header() {
   const menuItems = [
     {
@@ -39,11 +40,11 @@ export default function Header() {
     <div className='header'>
         <div className='nav'>
           <Link to='/' className='flex' >
-          <img src='logo.png' style={{height:"55px", width:"65px", marginTop:"23px"}}></img>
-          <h1 className='mt-7 font-bold text-3xl '>IMMT</h1>
+            <img src='logo.png' style={{height:"55px", width:"65px", marginTop:"23px"}}></img>
+            <h1 className='mt-7 font-bold text-3xl '>IMMT</h1>
           </Link>
         </div>
-          <Navbar  menuItems={menuItems}/>
+        <Navbar  menuItems={menuItems}/>
     </div>
   )
 }

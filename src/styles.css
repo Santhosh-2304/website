@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+>>>>>>> 53f85ac135887e6d6be4096e325c83b817cb6184
 body{
     font-family: 'Poppins';
     margin: 0;  
@@ -15,11 +18,14 @@ body{
   padding: 10px 20px;
   z-index: 1000;
 }
+<<<<<<< HEAD
 
 .header h1{
   padding-Left:"10px";
   margin-left: 9px;
 }
+=======
+>>>>>>> 53f85ac135887e6d6be4096e325c83b817cb6184
 /* Navbar.css */
 .navbar-container{
     width: fit-content;
@@ -117,6 +123,10 @@ body{
   position: absolute;
   top: 0;
   left: 100%;
+<<<<<<< HEAD
+=======
+  margin-left: 10px;
+>>>>>>> 53f85ac135887e6d6be4096e325c83b817cb6184
   background: #fff;
   min-width: 180px;
   border-radius: 8px;
@@ -236,6 +246,7 @@ body{
     justify-content: space-around;
     align-items: center;
     
+<<<<<<< HEAD
 }
 .block3-c{
     border-radius: 25px;
@@ -269,3 +280,38 @@ body{
     margin-top: 80px;
     gap: 20px;
 }
+=======
+}
+.block3-c{
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+}
+.block3-c h6{
+    font-size: 25px;
+    margin: 0;
+}
+.block3-c p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.footer{
+    height: 400px;
+    margin: 0;
+    background: rgb(26, 25, 25);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: left;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+.contact{
+    margin-top: 80px;
+    gap: 20px;
+}
+>>>>>>> 53f85ac135887e6d6be4096e325c83b817cb6184
