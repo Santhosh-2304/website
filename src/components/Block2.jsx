@@ -3,7 +3,7 @@ import InfoBlockText from "../components/InfoBlockText";
 
 export default function Block2() {
   return (
-    <div className="block2">
+    <div">
 
       <InfoBlockText
         title="Become an upskilling master"
