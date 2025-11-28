@@ -1,16 +1,16 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home'
-import SoftwareTraining from './pages/SoftwareTraining'
-import SoftwareTech from './pages/SoftwareTech'
-import AboutUs from './pages/AboutUs'
-import Contact from './pages/Contact'
-import Careers from './pages/Careers'
-import AcademicTraining from './pages/AcademicTraining'
-import TrainingTalent from './pages/TrainingTalent'
-import CorporateTraining from './pages/CorporateTraining'
-import Research from './pages/Research'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
+import Home from './pages/Home'
+import SoftwareTechnology from './pages/SoftwareTechnology'
+import TrainingTalent from './pages/TrainingTalent'
+import AcademicTraining from './pages/AcademicTraining'
+import CorporateTraining from './pages/CorporateTraining'
+import Careers from './pages/Careers'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Footer from './components/Footer'
+
 
 const App = () => {
   return (
@@ -18,16 +18,15 @@ const App = () => {
     <Header />
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/software-training-services' element={<SoftwareTraining />} />
-      <Route path='training-talent' element={<TrainingTalent />} />
+      <Route path='/training-talent' element={<TrainingTalent/>} />
       <Route path='/academic-training' element={<AcademicTraining />} />
       <Route path='/corporate-training' element={<CorporateTraining />} />
-      <Route path='/software-technology-solutions' element={<SoftwareTech />} />
-      <Route path='/research-development' element={<Research />} />
-      <Route path ='/careers' element={<Careers />} />
-      <Route path='/aboutus' element={<AboutUs />} />
-      <Route path ='/contact' element={<Contact />} />
+      <Route path='/software-technology-solutions' element={<SoftwareTechnology />} />
+      <Route path='/careers' element={<Careers />} />
+      <Route path='/aboutus' element={<About />} />
+      <Route path='/contact' element={<Contact />} />
     </Routes>
+    <Footer />
     </>
   )
 }
