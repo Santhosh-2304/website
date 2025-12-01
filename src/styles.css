@@ -4,16 +4,17 @@ body{
     font-family: 'Poppins';
     margin: 0;  
     overflow-x: hidden;
+    padding-top: 250px;
 }
 :root{
     --shadow: 0 8px 30px rgba(16,34,40,0.08);
 }
 .header{
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: #fff;
-  padding: 10px 20px;
-  z-index: 1000;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .header h1{
@@ -67,6 +68,7 @@ body{
   pointer-events: none;
   transition: all 0.25s ease;
   z-index: 100;
+  margin-top: 15px;
 }
 
 .dropdown.open {
@@ -166,16 +168,6 @@ body{
   font-size: 10px;
 }
 
-
-.block1{
-    height: 650px;
-    width: 100%;
-    background: linear-gradient(135deg,rgb(47, 4, 53),rgb(5, 3, 44));
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
 .block1-container{
     display: flex;
     flex-direction: row;
@@ -183,20 +175,20 @@ body{
     border-radius: 25px;
     box-shadow: var(--shadow);
     color: white;
-    background: linear-gradient(135deg,rgba(8, 5, 31, 0.842),rgb(83, 15, 85));
-    width: 85%;
-    height: 400px;
+    background: linear-gradient(135deg,rgba(50, 107, 173, 0.842),rgb(9, 7, 56));
+    width: 95%;
     padding: 40px;
+    gap: 40px;
 }
 .btn-block1{
     color: white;
-    padding: 15px;
+    padding: 15px 40px;
     background: rgb(30, 5, 53);
     border-radius: 25px;
     font-size: medium;
-    width: 250px;
-    font-style:initial;
+    width: 180px;
     border: none;
+    cursor: pointer;
 }
 
 .block3{
@@ -279,3 +271,17 @@ body{
     gap: 20px;
 }
 
+.header-div {
+      background-image: url('/header_bg.jpg');
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+.header-text {
+  font-style: "color:White";
+  font-size: 30px;
+  margin-top: 10px;
+  font-display: block;
+}
