@@ -1,19 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Block1() {
+function Block1({title, content, image, service }) {
   return (
-    <div className='block1'>
         <div className='block1-container'>
-        <div className='block1-container1'>
-            <h3 style={{fontSize:"30px"}}>Explore led Courses</h3>
-            <h1 style={{fontSize:"50px"}}>Master tech skills with the master of their domain</h1>
-            <h5 style={{fontSize:"20px"}}>Completely transform your team or yourself with courses developed by industry leaders, ensuring you receive high-quality insights from top-tier technologists.</h5> 
+        <div className='flex flex-col gap-[8px]'>
+            <h3 className='text-3xl font-bold '>{title}</h3>
+            <p  className='text-xl text-gray-200'>{content}</p>
+            <Link to= {service} className='btn-block1 mt-3'>Learn more</Link>
         </div>
-        <img src='src\assets\istockphoto-2220890473-612x612.webp' style={{borderRadius:"25px",width:"500px",height:"300px",margin:"20px 40px"}}></img>
-         
+        <img
+        src={image}
+        className="rounded-2xl w-[500px] h-[300px] object-cover mx-8"
+      />
         </div>
-    </div>
+   
   )
 }
 
-export default Block1
+export default Block1 
