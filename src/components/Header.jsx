@@ -30,6 +30,7 @@ export default function Header() {
         },
         { label: 'Research and Development' ,  path:'/research-development' },
       ],
+      path:'/services'
     },
     {  label: 'Careers', path: '/careers'},
     {  label: 'About Us', path: '/aboutus'},
@@ -37,14 +38,23 @@ export default function Header() {
   ];
 
   return (
-    <div className='header'>
-        <div className='nav'>
+    <div className='header' > 
+    <div className='socialmediatool' style={{height:"40px", width:"100%",backgroundColor:"black"}}>
+       <ul style={{display:'block', textAlign:'Right'}}>
+          <li style={{display:'inline-block'}}><img src='facebook.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
+          <li style={{display:'inline-block'}}><img src='instagram.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
+          <li style={{display:'inline-block'}}><img src='social.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
+          <li style={{display:'inline-block'}}><img src='youtube.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>        
+        </ul>  
+      </div>     
+        <div className='header-div' >
           <Link to='/' className='flex' >
-            <img src='logo.png' style={{height:"55px", width:"65px", marginTop:"23px"}}></img>
-            <h1 className='mt-7 font-bold text-3xl '>IMMT</h1>
+            <img src='logo.png' style={{height:"120px", width:"125px", marginTop:"0px"}}></img>            
+            <h1  className='mt-7 font-bold text-4xl text-white' style={{ marginTop:"40px",marginLeft:"70px"}}>INNOVATIONAL METTLE MINDS TECH PRIVATE LIMITED</h1>
           </Link>
         </div>
         <Navbar  menuItems={menuItems}/>
     </div>
+
   )
 }
