@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import "tailwindcss";
+body{
+    font-family: 'Poppins';
+    margin: 0;  
+    overflow-x: hidden;
+    padding-top: 220px;
+}
+:root{
+    --shadow: 0 8px 30px rgba(16,34,40,0.08);
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header h1{
+  padding-Left:"10px";
+  margin-left: 9px;
+}
+.header-div {
+      background-image: url('/header_bg.jpg');
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+.header-text {
+  font-style: "color:White";
+  font-size: 30px;
+  margin-top: 10px;
+  font-display: block;
+}
+.scroll-section {
+  scroll-margin-top: 150px; /* adjust depending on header height */
+}
+
+/* Navbar.css */
+.navbar-container{
+    width: fit-content;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 680;
+  color: #111827;
+  padding: 16px 10px;
+  font-family: 'Poppins';
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #2563eb;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 100;
+  margin-top: 15px;
+}
+
+.dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #111827;
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'poppins';
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+}
+
+.has-submenu::after {
+  content: '▶';
+  font-size: 11px;
+  margin-left: 8px;
+  color: #6b7280;
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.submenu.open {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.submenu-item a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.submenu-item a:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  color: #6b7280;
+}
+
+.arrow.small {
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.block1-container{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    color: white;
+    background: linear-gradient(135deg,rgba(50, 107, 173, 0.842),rgb(9, 7, 56));
+    width: 95%;
+    padding: 40px;
+    gap: 40px;
+}
+.btn-block1{
+    color: white;
+    padding: 15px 40px;
+    background: rgb(30, 5, 53);
+    border-radius: 25px;
+    font-size: medium;
+    width: 180px;
+    border: none;
+    cursor: pointer;
+}
+
+.block3-c {
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  background-color: white;
+  padding: 20px;
+  min-height: 180px;      /* flexible height */
+}
+
+
+/* .footer{
+    height: 300px;
+    background: rgb(26, 25, 25);
+    color: white;
+    width: 100%;
+    margin-top: 50px;
+} */
+.contact{
+    margin-top: 80px;
+    gap: 20px;
+}
+
+
