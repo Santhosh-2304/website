@@ -8,69 +8,100 @@ export default function HamburgerMenu() {
   const navigate = useNavigate();
   const location = useLocation();
   const closeMenu = () => setOpen(false);
+  const [openChild, setOpenChild] = useState({});
   const menuData = [
   {
-    label: "Home",
-    path: "/",
-    singlePage: true,
-    defaultSection: "what-we-do",
-    children: [
-      { label: "What We Do", anchor: "what-we-do" },
-      { label: "Why Choose Us", anchor: "why-choose-us" },
-      { label: "Client Reviews", anchor: "client-reviews" },
-      { label: "Our Mission", anchor: "our-mission" },
-    ],
-  },
-
-  {
-    label: "Services",
-    path: "/services",
+    label: "Software training",
+    path: "/software-training-services",
     children: [
       {
-        label: "Software Training Services",
+        label: "Full Stack",
         path: "/software-training-services",
         children: [
           {
-            label: "Training & Talent Management",
+            label: "MERN",
             path: "/training-talent",
           },
           {
-            label: "Academic Training Programs",
+            label: "MEAN",
             path: "/academic-training",
           },
           {
-            label: "Corporate Training",
+            label: "Python",
             path: "/corporate-training",
+          },
+          {
+            label: "Java",
+            path: "/corporate-training",
+          },
+          {
+            label: ".NET",
+            path: "/",
           },
         ],
       },
 
       {
-        label: "Software & Technology Solutions",
-        path: "/software-technology-solutions",
+        label: "Cloud",
+        path: "/",
         singlePage: true,
         children: [
-          { label: "Application Development", anchor: "application-development" },
-          { label: "Managed IT Services", anchor: "managed-it-services" },
-          { label: "Consulting & Support", anchor: "consulting-support" },
-          { label: "Digital Transformation", anchor: "digital-transformation" },
-          { label: "Cloud Solutions", anchor: "cloud-solutions" },
-          { label: "Cybersecurity & Digital Forensics", anchor: "cybersecurity-digital-forensics" },
+          { label: "IaaS" },
+          { label: "PaaS" },
+          { label: "SaaS", anchor: "consulting-support" },
         ],
       },
 
       {
-        label: "Research & Development",
+        label: "AI and ML",
         path: "/research-development",
       },
+      {
+        label: "IoT",
+        children:[
+          {label:"Embedded Systems"},
+          {label:"Rasberry Pi / Arduino Kits"}
+        ]
+      }
     ],
   },
 
-  { label: "Careers", path: "/careers" },
-  { label: "About Us", path: "/aboutus" },
-  { label: "Contact", path: "/contact" },
+  { label: "Software Development",
+    children:[
+      {label:"App development", anchor: "application-development",
+        children:[
+          {label:"Mobile App", anchor: "application-development"},
+          {label:"Web App", anchor: "application-development"},
+          {label:"Windows App", anchor: "application-development"},
+          {label:"IOT App", anchor: "application-development"},
+          {label:"Cloud Native App", anchor: "application-development"},
+        ]
+      },
+      {label:"Managed IT services",
+        children:[
+          {label:"Custom Software/Cloud Integrations", anchor: "managed-it-services"},
+          {label:"Micro Services", anchor: "managed-it-services"},
+          {label:"Test Automations", anchor: "managed-it-services"},
+          {label:"AI/ML Agent Development", anchor: "managed-it-services"},
+          {label:"Software Support / Maintenance / Implementation", anchor: "managed-it-services"}
+        ]
+      }
+    ],
+    path: "/software-technology-solutions",
+    singlePage: true },
+  { label: "Technology Consulting Services",
+    children:[
+      {label:"Software Architecture Design"},
+      {label:"Performance Optimization & Refactoring"},
+      {label:"Security Audits & Compliance"},
+      {label:"Process Automation & Digitization"},
+      {label:"System Integration & API Consulting"},
+      {label:"Digital Marketing"}
+    ],
+    path: "/corporate-training" },
 ];
 
+  const HEADER_HEIGHT = 206;
   // slugify helper
   const slug = (text) =>
     text
@@ -101,56 +132,33 @@ export default function HamburgerMenu() {
   return (
     <>
       <button
-        aria-label={open ? "Close menu" : "Open menu"}
-        aria-expanded={open}
         onClick={() => setOpen((s) => !s)}
-        className="z-50 ml-4 mr-8 w-10 h-10 flex items-center justify-center"
+        aria-label="Menu"
+        className="relative z-[999] ml-4 mr-6 flex items-center cursor-pointer"
       >
-        <i className="fa-solid fa-bars text-2xl cursor-pointer hover:text-blue-500"></i>
+        <i className={`fa-solid fa-bars text-2xl ${open ? "text-blue-600":""}`}></i>
       </button>
-
-      {/* Backdrop */}
-      <div
-        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        aria-hidden={!open}
-        onClick={() => setOpen(false)}
-      />
 
       {/* Side panel */}
       <aside
         ref={panelRef}
-        className={`fixed top-0 left-0 h-full w-[420px] bg-gradient-to-r from-blue-100 to-purple-50 z-50 shadow-2xl transform transition-transform duration-300
-          ${open ? "translate-x-0" : "-translate-x-full"}`}
-        aria-hidden={!open}
+        className={`fixed left-0 z-[999] bg-gradient-to-r from-blue-200 to-gray-50 shadow-2xl w-[280px] 
+        transition-transform duration-300 
+        ${open ? "translate-x-0" : "-translate-x-full"}`}
+        style={{
+          top: HEADER_HEIGHT + "px",
+          height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+        }}
       >
         <div className="h-full flex flex-col">
           {/* header inside panel */}
-          <div className="flex items-center justify-between px-6 py-4 border-b">
-            <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="logo" className="h-10 w-10 object-contain" />
-              <div>
-                <div className="text-lg font-semibold">INNOVATIONAL METTLE MINDS</div>
-              </div>
-            </div>
-
-            <button
-              aria-label="Close menu"
-              onClick={() => setOpen(false)}
-              className="p-2 rounded-md hover:bg-gray-300 cursor-pointer"
-            >
-              ✕
-            </button>
-          </div>
-        <div className="h-full overflow-y-auto px-6 py-6">
-
+        <div className="h-full overflow-y-auto px-5 py-6">
           <ul className="space-y-6">
             {menuData.map((parent, pIdx) => (
               <li key={pIdx}>
                 {/* Parent */}
                 <div
-                  className="text-gray-900 font-semibold text-lg cursor-pointer hover:text-blue-600"
+                  className="text-gray-900 font-semibold text-lg cursor-pointer hover:text-blue-600 "
                   onClick={() =>
                     parent.singlePage
                       ? handleNavigate(parent.path, parent.defaultSection || "")
@@ -160,44 +168,63 @@ export default function HamburgerMenu() {
                   {parent.label}
                 </div>
 
-                {/* Children */}
                 {parent.children && (
                   <ul className="mt-2 ml-4 space-y-2">
                     {parent.children.map((child, cIdx) => {
-                      const childHasOwnChildren = child.children?.length > 0;
+                      const childHasChildren = child.children?.length > 0;
+
+                      const key = slug(parent.label + "-" + child.label);
+
+                      const isOpen = openChild[key];
 
                       const isAnchor =
                         child.anchor || parent.singlePage || child.singlePage;
 
-                      const anchorId =
-                        child.anchor || slug(child.label);
+                      const anchorId = child.anchor || slug(child.label);
 
                       return (
                         <li key={cIdx}>
-                          {/* Child row */}
-                          <button
-                            className="text-gray-700 text-base hover:text-blue-600 text-left"
-                            onClick={() =>
-                              handleNavigate(
-                                child.path || parent.path,
-                                isAnchor ? anchorId : ""
-                              )
-                            }
-                          >
-                            • {child.label}
-                          </button>
 
-                          {/* Grandchildren */}
-                          {childHasOwnChildren && (
-                            <ul className="ml-6 mt-1 space-y-1">
+                          {/* CHILD ROW */}
+                          <div className="flex ">
+                            {/* + or - icon */}
+                            {childHasChildren && (
+                              <button
+                                className="text-xl font-bold text-gray-700 ml-2 cursor-pointer"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setOpenChild((prev) => ({
+                                    ...prev,
+                                    [key]: !prev[key],
+                                  }));
+                                }}
+                              >
+                                {isOpen ? "–" : "+"}
+                              </button>
+                            )}
+                            <button
+                              className="text-gray-700 text-base ml-2 hover:text-blue-600 text-left"
+                              onClick={() =>
+                                handleNavigate(
+                                  child.path || parent.path,
+                                  isAnchor ? anchorId : ""
+                                )
+                              }
+                            >
+                               {child.label}
+                            </button>
+
+                            
+                          </div>
+
+                          {/* GRANDCHILDREN (collapsible) */}
+                          {childHasChildren && isOpen && (
+                            <ul className="ml-6 mt-2 space-y-1">
                               {child.children.map((sub, sIdx) => {
                                 const isSubAnchor =
-                                  sub.anchor ||
-                                  child.singlePage ||
-                                  parent.singlePage;
+                                  sub.anchor || child.singlePage || parent.singlePage;
 
-                                const subAnchorId =
-                                  sub.anchor || slug(sub.label);
+                                const subAnchorId = sub.anchor || slug(sub.label);
 
                                 return (
                                   <li key={sIdx}>
@@ -222,6 +249,7 @@ export default function HamburgerMenu() {
                     })}
                   </ul>
                 )}
+
               </li>
             ))}
           </ul>

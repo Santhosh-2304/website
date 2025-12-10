@@ -7,7 +7,7 @@ function TitleBlock({
   image,
 }) {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center justify-between px-10 py-20 bg-gray-50 relative overflow-hidden">
+    <div className="w-full flex flex-col md:flex-row items-center justify-between px-10 py-10 bg-gray-50 relative overflow-hidden">
 
       {/* LEFT CONTENT */}
       <div className= "md:w-1/2 space-y-6">
@@ -26,7 +26,7 @@ function TitleBlock({
         <img
           src={image}
           alt="hero"
-          className="md:w-[700px] object-contain drop-shadow-xl rounded-2xl"
+          className="md:w-[600px] object-contain drop-shadow-xl rounded-2xl"
         />
         </ScrollAnimate>
       </div>

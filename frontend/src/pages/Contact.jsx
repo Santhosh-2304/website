@@ -38,17 +38,16 @@ const Contact = () => {
   };
 
   return (
-    <div className='flex p-20 '>
+    <div className='flex p-15 '>
       <div className='w-[700px] mr-[50px]'>
         <h1 className='font-bold text-3xl mb-2'>Partner with IMMT to accelerate your digital journey.</h1>
         <h4 className='text-xl'>Whether you’re a business seeking custom technology or an individual looking to build
         future-ready skills, we’re here to help.</h4>
-        <p className='text-xl'>Contact us today to explore collaboration opportunities or to learn more about our
-        services.</p>
+        <p className='text-xl'>Contact us today to explore collaboration opportunities or to learn more about our services.</p>
       </div>
-      <div className='w-[600px] ml-[50px] bg-gray-200 rounded-3xl p-10 shadow-xl'>
+      <div className='w-[600px] ml-[50px] bg-gray-200 rounded-3xl p-8 shadow-xl'>
         <h1 className='text-2xl font-semibold mb-8'>Let's chat</h1>
-        <form className='space-y-4' onSubmit={handleSubmit}>
+        <form className='space-y-2' onSubmit={handleSubmit}>
           <label className='block font-medium'>Full Name</label>
           <input type='text' name="name" value={form.name} onChange={handleChange} className='w-full border rounded-xl px-4 py-2 '></input>
           <label className='block '>Email address</label>
@@ -58,9 +57,8 @@ const Contact = () => {
           <label className='block '>Subject</label>
           <input type='text' name="subject" value={form.subject} onChange={handleChange} className='w-full border rounded-xl px-4 py-2'></input>
           <label className='block '>Message</label>
-          <textarea className='w-full border rounded-xl px-4 py-2' name="message" value={form.message} onChange={handleChange}></textarea>
-          <button className='bg-blue-900 w-full rounded-2xl p-2 text-white cursor-pointer' type="submit"> Submit </button>
-
+          <textarea className='w-full border rounded-xl px-4 py-3' name="message" value={form.message} onChange={handleChange}></textarea>
+          <button className='bg-blue-900 w-full rounded-2xl p-2 text-white cursor-pointer mt-2' type="submit"> Submit </button>
         </form>
       </div>
     </div>

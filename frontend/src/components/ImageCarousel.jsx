@@ -28,7 +28,7 @@ function ImageCarousel({ images = [], interval = 3000 }) {
   };
 
   return (
-    <div className="relative h-[500px] w-full overflow-hidden ">
+    <div className="relative h-[350px] w-[97%] overflow-hidden ml-5">
       
       {/* IMAGE */}
       <img

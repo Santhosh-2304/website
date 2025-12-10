@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD:frontend/src/pages/Services.jsx
 import Block1 from '../components/Block1'
 import TitleBlock from '../components/TitleBlock'
 const Services = () => {
@@ -65,13 +64,6 @@ const Services = () => {
 }
 
 export default Services
-=======
 
-const Services = () => {
-  return (
-    <div>Services</div>
-  )
-}
 
-export default Services
->>>>>>> 6af779e79f43356867c5fce0f719f9c972b83424:src/pages/Services.jsx
+

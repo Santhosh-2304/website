@@ -4,11 +4,7 @@ body{
     font-family: 'Poppins';
     margin: 0;  
     overflow-x: hidden;
-<<<<<<< HEAD:frontend/src/styles.css
-    padding-top: 220px;
-=======
-    padding-top: 250px;
->>>>>>> 6af779e79f43356867c5fce0f719f9c972b83424:src/styles.css
+    padding-top: 208px;
 }
 :root{
     --shadow: 0 8px 30px rgba(16,34,40,0.08);
@@ -25,7 +21,6 @@ body{
   padding-Left:"10px";
   margin-left: 9px;
 }
-<<<<<<< HEAD:frontend/src/styles.css
 .header-div {
       background-image: url('/header_bg.jpg');
       width: 100%;
@@ -43,8 +38,6 @@ body{
 .scroll-section {
   scroll-margin-top: 150px; /* adjust depending on header height */
 }
-=======
->>>>>>> 6af779e79f43356867c5fce0f719f9c972b83424:src/styles.css
 
 /* Navbar.css */
 .navbar-container{
@@ -92,7 +85,7 @@ body{
   pointer-events: none;
   transition: all 0.25s ease;
   z-index: 100;
-  margin-top: 15px;
+  margin-top: 11px;
 }
 
 .dropdown.open {
@@ -215,7 +208,6 @@ body{
     cursor: pointer;
 }
 
-<<<<<<< HEAD:frontend/src/styles.css
 .block3-c {
   border-radius: 25px;
   box-shadow: var(--shadow);
@@ -224,102 +216,9 @@ body{
   min-height: 180px;      /* flexible height */
 }
 
-
-/* .footer{
-    height: 300px;
-=======
-.block3{
-    height: 400px;
-    width: 100%;
-    background: rgb(4, 4, 53);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.block3-c{
-    border-radius: 25px;
-    box-shadow: var(--shadow);
-    background-color: rgb(255, 255, 255);
-    height: 200px;
-    color: black;
-    padding: 20px;
-    margin: 20px;
-}
-.block3-c h6{
-    font-size: 15px;
-    margin: 0;
-}
-.block3-c p{
-    font-size: 10px;
-    margin-top: 10px;
-}
-.footer{
-    height: 400px;
-    margin: 0;
->>>>>>> 6af779e79f43356867c5fce0f719f9c972b83424:src/styles.css
-    background: rgb(26, 25, 25);
-    color: white;
-    width: 100%;
-    margin-top: 50px;
-} */
 .contact{
     margin-top: 80px;
     gap: 20px;
 }
 
 
-<<<<<<< HEAD:frontend/src/styles.css
-=======
-.block3-c{
-    border-radius: 25px;
-    box-shadow: var(--shadow);
-    background-color: rgb(255, 255, 255);
-    height: 200px;
-    color: black;
-    padding: 20px;
-    margin: 20px;
-}
-
-.block3-c h6{
-    font-size: 20px;
-    font-weight: 800px;
-    margin: 0;
-}
-.block3-c p{
-    font-size: 15px;
-    margin-top: 10px;
-}
-
-.footer{
-    height: 300px;
-    margin: 0;
-    background: rgb(26, 25, 25);
-    color: white;
-    width: 100%;
-    display: flex;
-    align-items: left;
-    padding-left: 50px;
-    margin-top: 50px;
-}
-.contact{
-    margin-top: 80px;
-    gap: 20px;
-}
-
-.header-div {
-      background-image: url('/header_bg.jpg');
-      width: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-.header-text {
-  font-style: "color:White";
-  font-size: 30px;
-  margin-top: 10px;
-  font-display: block;
-}
->>>>>>> 6af779e79f43356867c5fce0f719f9c972b83424:src/styles.css

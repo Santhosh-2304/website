@@ -70,8 +70,7 @@ const Navbar = ({ menuItems = []}) => {
               key={index}
               className="navbar-item"
               onMouseEnter={() => handleMouseEnter(index)}
-            >
-            
+            >              
               <Link to={item.path} className="navbar-link" onClick={closeAllMenus}>
                 {item.label}
                 {item.children && (

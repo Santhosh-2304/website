@@ -3,12 +3,12 @@ import ScrollAnimate from "./ScrollFade";
 function InfoBlockText({ title, text, image, reverse = false }) {
   return (
     <div
-      className={`flex items-center justify-center pt-20 ${
+      className={`flex items-center justify-center pt-5 ${
         reverse ? "flex-row-reverse" : ""
       }`}
     >
       {/* TEXT AREA */}
-      <div className="w-[600px] px-6">
+      <div className="w-[600px] px-6 py-8">
         <h5 className="text-3xl font-semibold mb-4">{title}</h5>
         <p className="text-gray-700 leading-relaxed">{text}</p>
       </div>
