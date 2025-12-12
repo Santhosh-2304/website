@@ -4,9 +4,9 @@ import React from 'react'
 import ImageCarousel from '../components/ImageCarousel'
 
 const images = [
-      "training.jpg",
       "Corporate.jpg",
-      "src/assets/training.jpg"
+      "teach.jpg",
+      "discussion.jpg",
 ]
 const courseList = [
   {
@@ -29,8 +29,6 @@ const courseList = [
     description:
       "Stop cyber attacks, secure critical systems, and position yourself as the expert.",
   },
-
- 
   {
     title: "UI/UX Design",
     description:

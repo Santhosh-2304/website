@@ -28,12 +28,12 @@ function ImageCarousel({ images = [], interval = 3000 }) {
   };
 
   return (
-    <div className="relative h-[350px] w-[97%] overflow-hidden ml-5">
+    <div className="relative h-[350px] w-[97%] overflow-hidden  ml-5">
       
       {/* IMAGE */}
       <img
         src={images[currentIndex]}
-        className="w-full h-full object-cover transition-all duration-700"
+        className="w-full h-full object-cover object-[50%_40%]  transition-all duration-700"
       />
 
       {/* ARROWS */}

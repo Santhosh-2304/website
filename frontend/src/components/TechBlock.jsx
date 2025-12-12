@@ -17,6 +17,7 @@ export default function TechBlock() {
             "Cloud & Data Analytics solutions for secure migration and business intelligence."
           ]}
           image="src/assets/app.jpg"
+          nav="/app-development"
         />
       </section>
 
@@ -30,6 +31,7 @@ export default function TechBlock() {
             "Network security, backup, and disaster recovery."
           ]}
           image="src/assets/IT.avif"
+          nav="/it"
           reverse
         />
       </section>

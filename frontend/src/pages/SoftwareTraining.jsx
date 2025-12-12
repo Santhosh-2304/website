@@ -14,10 +14,7 @@ const SoftwareTraining = () => {
         emerging tech, tailored for beginners and advanced learners.
         Our live project experience and certification courses prepare individuals for real-world
         success while our talent management services streamline resourcing, placement, and
-        career development for enterprise clients.
-        Choose IMMT to access hands-on workshops, career support, and a strong
-        professional network—which ensures businesses find the right talent and learners build
-        robust portfolios."
+        career development for enterprise clients."
         image="training.jpg"
       />
     <div className='bg-blue-50 pl-10 pr-10 pt-5'>

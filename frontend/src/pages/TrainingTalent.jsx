@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoBlockText from '../components/InfoBlockText'
+import InfoBlock from '../components/InfoBlock'
 import TitleBlock from '../components/TitleBlock'
 import Block3 from '../components/Block3'
 const courses = [
@@ -39,9 +39,9 @@ const TrainingTalent = () => {
                     workforce solutions. Our resourcing services ensure the right talent is aligned with
                     the right opportunity."
       />
-        <InfoBlockText
+        <InfoBlock
         title="Fresher training & Placement"
-        text="At IMMT, we empower fresh graduates to kickstart their careers with confidence.
+        content="At IMMT, we empower fresh graduates to kickstart their careers with confidence.
             Our Fresher Training & Placement Program is designed to bridge the gap
             between academic learning and industry expectations.
             We provide hands-on training in the latest technologies, real-time project exposure,
@@ -51,9 +51,9 @@ const TrainingTalent = () => {
         image="src/assets/cons.avif"
       />
 
-      <InfoBlockText
+      <InfoBlock
         title="Lateral/Experienced training & Placement"
-        text="For working professionals seeking to upgrade their skills or transition to advanced
+        content="For working professionals seeking to upgrade their skills or transition to advanced
                 roles, IMMT offers specialized Lateral/Experienced Training & Placement
                 Programs.
                 Our expert-led modules focus on deep technical knowledge, practical scenarios,

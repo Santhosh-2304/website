@@ -41,19 +41,6 @@ export default function HamburgerMenu() {
         ],
         singlePage: true
       },
-
-      {
-        label: "Cloud",
-        path: "/",
-        singlePage: true,
-        children: [
-          { label: "IaaS" },
-          { label: "PaaS" },
-          { label: "SaaS", anchor: "consulting-support" },
-        ],
-      },
-
-      
       {
         label: "IoT",
         children:[
@@ -70,22 +57,22 @@ export default function HamburgerMenu() {
 
   { label: "Software Development",
     children:[
-      {label:"App development", anchor: "application-development",
+      {label:"App development", path:"/app-development",
         children:[
-          {label:"Mobile App", anchor: "application-development"},
-          {label:"Web App", anchor: "application-development"},
-          {label:"Windows App", anchor: "application-development"},
-          {label:"IOT App", anchor: "application-development"},
-          {label:"Cloud Native App", anchor: "application-development"},
+          {label:"Mobile App", anchor: "mobile-app-development"},
+          {label:"Web App", anchor: "desktop-app-development"},
+          {label:"Enterprise App", anchor: "enterprise-app-development"},
+          {label:"IOT App", anchor: "iot-app-development"},
+          {label:"Cloud Native App", anchor: "cloud-app-development"},
         ]
       },
-      {label:"Managed IT services",
+      {label:"Managed IT services", path:"/it",
         children:[
-          {label:"Custom Software/Cloud Integrations", anchor: "managed-it-services"},
-          {label:"Micro Services", anchor: "managed-it-services"},
-          {label:"Test Automations", anchor: "managed-it-services"},
-          {label:"AI/ML Agent Development", anchor: "managed-it-services"},
-          {label:"Software Support / Maintenance / Implementation", anchor: "managed-it-services"}
+          {label:"Custom Software/Cloud Integrations", anchor: "software-cloud-integrations"},
+          {label:"Micro Services", anchor: "microservices"},
+          {label:"Test Automations", anchor: "testing"},
+          {label:"AI/ML Agent Development", anchor: "ai-ml"},
+          {label:"Software Support / Maintenance / Implementation", anchor: "software-support"}
         ]
       }
     ],
@@ -94,14 +81,15 @@ export default function HamburgerMenu() {
   
     { label: "Technology Consulting Services",
     children:[
-      {label:"Software Architecture Design"},
-      {label:"Performance Optimization & Refactoring"},
-      {label:"Security Audits & Compliance"},
-      {label:"Process Automation & Digitization"},
-      {label:"System Integration & API Consulting"},
-      {label:"Digital Marketing"}
+      {label:"Software Architecture Design",anchor:"design-architecture"},
+      {label:"Performance Optimization & Refactoring", anchor:"performance"},
+      {label:"Security Audits & Compliance", anchor:"security"},
+      {label:"Process Automation & Digitization", anchor:"process-automation"},
+      {label:"System Integration & API Consulting", anchor:"api"},
+      {label:"Digital Marketing", anchor:"digital-marketing"}
     ],
-    path: "/corporate-training" },
+    path: "/consulting",
+  },
 ];
 
   const HEADER_HEIGHT = 197;

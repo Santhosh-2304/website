@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoBlockText from '../components/InfoBlockText'
+import InfoBlock from '../components/InfoBlock'
 import TitleBlock from '../components/TitleBlock'
 const AcademicTraining = () => {
   return (
@@ -15,9 +15,9 @@ const AcademicTraining = () => {
                     Our goal is to enhance the academic environment with innovative learning
                     experiences that prepare students for a strong professional future."
       />
-        <InfoBlockText
+        <InfoBlock
         title="College/Institution Projects"
-        text="Our College & Institution Project Services provide students with end-to-end
+        content="Our College & Institution Project Services provide students with end-to-end
                 guidance in completing their academic projects with industry relevance.
                 We support concept development, system design, implementation, documentation,
                 and final presentation.
@@ -28,9 +28,9 @@ const AcademicTraining = () => {
         image="src/assets/cons.avif"
       />
 
-      <InfoBlockText
+      <InfoBlock
         title="Internship Programs"
-        text="IMMT’s Internship Programs offer students and early professionals an opportunity
+        content="IMMT’s Internship Programs offer students and early professionals an opportunity
                 to gain real-world industry experience.
                 Interns work alongside expert developers, analysts, and engineers on live projects,
                 learning practical problem-solving and application development.
