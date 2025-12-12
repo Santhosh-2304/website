@@ -22,7 +22,7 @@ const Services = () => {
         robust portfolios"
         image="training.jpg"
         />
-    <div className='bg-blue-100 p-10'>
+    <div className='bg-blue-50 pl-10 pr-10 pt-5'>
       <Block1
         title="Software Training Services"
         content="IMMT stands at the forefront of technology-based training and software solutions,

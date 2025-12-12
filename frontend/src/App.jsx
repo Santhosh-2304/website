@@ -14,6 +14,7 @@ import Footer from './components/Footer'
 import SoftwareTraining from './pages/SoftwareTraining'
 import ScrollToTop from './components/ScrollToTop'
 import Research from './pages/Research'
+import FullStack from './pages/FullStack'
 import { Toaster } from "react-hot-toast";
 
 
@@ -32,6 +33,7 @@ const App = () => {
       <Route path='/corporate-training' element={<CorporateTraining />} />
       <Route path='/software-technology-solutions' element={<SoftwareTechnology />} />
       <Route path='/research-development' element={<Research />} />
+      <Route path='/fullstack' element={<FullStack />} />
       <Route path='/careers' element={<Careers />} />
       <Route path='/aboutus' element={<About />} />
       <Route path='/contact' element={<Contact />} />

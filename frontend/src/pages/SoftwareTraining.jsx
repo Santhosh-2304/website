@@ -9,10 +9,7 @@ const SoftwareTraining = () => {
         title="Software Training and Services"
         description="IMMT stands at the forefront of technology-based training and software solutions,
         empowering individuals and organizations through immersive, hands-on learning and
-        advanced digital services. Our integrated programs and innovative tools are designed to
-        foster real-world expertise, fuel career growth, and drive operational excellence.
-        Experience an environment where cutting-edge technology meets practical education,
-        equipping you to thrive in an ever-evolving digital landscape.
+        advanced digital services. 
         IMMT offers dynamic training programs in software development, digital marketing, and
         emerging tech, tailored for beginners and advanced learners.
         Our live project experience and certification courses prepare individuals for real-world
@@ -23,7 +20,7 @@ const SoftwareTraining = () => {
         robust portfolios."
         image="training.jpg"
       />
-    <div className='bg-blue-100 p-10'>
+    <div className='bg-blue-50 pl-10 pr-10 pt-5'>
       <Block1
         title="Training & Talent"
         content="Our specialized training programs cover software technologies, digital tools, and

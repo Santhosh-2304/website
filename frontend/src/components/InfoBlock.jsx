@@ -2,7 +2,7 @@ import React from "react";
 import ScrollAnimate from "./ScrollFade";
 function InfoBlock({ title, content, image, reverse = false }) {
   return (
-    <div className={`flex items-center justify-center  pt-20 ${reverse ? "flex-row-reverse " : ""}`}>
+    <div className={`flex items-center justify-center  pt-8 ${reverse ? "flex-row-reverse " : ""}`}>
       
   
       <div className="w-[600px] px-6">

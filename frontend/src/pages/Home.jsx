@@ -30,7 +30,7 @@ const courseList = [
       "Stop cyber attacks, secure critical systems, and position yourself as the expert.",
   },
 
-  // Add unlimited more courses here:
+ 
   {
     title: "UI/UX Design",
     description:

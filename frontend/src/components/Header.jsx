@@ -49,18 +49,19 @@ export default function Header() {
   },
   {  label: 'Careers', path: '/careers'},
   {  label: 'About Us', path: '/aboutus'},
-  { label: 'Contact' , path: '/contact'},
+  { label: 'Contact Us' , path: '/contact'},
 ];
 
 
   return (
     <div className='header' > 
-    <div className='socialmediatool' style={{height:"40px", width:"100%",backgroundColor:"black"}}>
-       <ul style={{display:'block', textAlign:'Right'}}>
-          <li style={{display:'inline-block'}}><img src='facebook.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
-          <li style={{display:'inline-block'}}><img src='instagram.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
-          <li style={{display:'inline-block'}}><img src='social.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>
-          <li style={{display:'inline-block'}}><img src='youtube.png' style={{height:"30px", width:"30px", marginTop:"4px",marginRight:"6px"}}></img></li>        
+    <div className='socialmediatool bg-gradient-to-r from-black via-gray-600 to-gray-300 pt-1 h-[30px] w-full '>
+       <ul className='block text-right px-2'>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-instagram text-2xl"></i></li>
+          <li style={{display:'inline-block'}}><i class="fa-brands fa-youtube text-2xl"></i></li>
+          <li style={{display:'inline-block'}}><i class="fa-brands fa-linkedin text-2xl"></i></li>
+          <li style={{display:'inline-block'}}><i class="fa-brands fa-facebook text-2xl"></i></li>
+          <li style={{display:'inline-block'}}><i class="fa-brands fa-x-twitter text-2xl"></i></li>
         </ul>  
       </div>     
         <div className='header-div' >

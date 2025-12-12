@@ -1,6 +1,31 @@
 import React from 'react'
 import InfoBlockText from '../components/InfoBlockText'
 import TitleBlock from '../components/TitleBlock'
+import Block3 from '../components/Block3'
+const courses = [
+  {
+    title: "Full Stack Development",
+    description:
+      "Master the art of building complete web applications, from front-end interfaces to back-end servers and databases. ",
+    service:'/fullstack'
+  },
+  {
+    title: "AI and ML",
+    description:
+      "Build fluency in languages like C#, Java, Angular, and JavaScript and evolve as they do.",
+  },
+  {
+    title: "Internet of Things (IoT)",
+    description:
+      "From AWS to Google Cloud and everything in between, expand your cloud clout.",
+  },
+  {
+    title: "Cloud Computing",
+    description:
+      "Stop cyber attacks, secure critical systems, and position yourself as the expert.",
+  },
+
+];
 const TrainingTalent = () => {
   return (
     <div>
@@ -39,6 +64,7 @@ const TrainingTalent = () => {
         image="src/assets/web.jpg"
         reverse
       />
+      <Block3 items = {courses} />
     </div>
   )
 }

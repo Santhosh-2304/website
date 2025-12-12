@@ -51,7 +51,7 @@ function ImageCarousel({ images = [], interval = 3000 }) {
         ❯
       </button>
 
-      {/* DOTS */}
+      {/* DOTS
       <div className="absolute bottom-3 w-full flex justify-center gap-2">
         {images.map((_, index) => (
           <div
@@ -62,7 +62,7 @@ function ImageCarousel({ images = [], interval = 3000 }) {
             }`}
           ></div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

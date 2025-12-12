@@ -16,29 +16,30 @@ export default function HamburgerMenu() {
     children: [
       {
         label: "Full Stack",
-        path: "/software-training-services",
+        path: "/fullstack",
         children: [
           {
             label: "MERN",
-            path: "/training-talent",
+            anchor: "mern",
           },
           {
             label: "MEAN",
-            path: "/academic-training",
+            anchor: "mean",
           },
           {
             label: "Python",
-            path: "/corporate-training",
+            anchor: "python",
           },
           {
             label: "Java",
-            path: "/corporate-training",
+            anchor: "java",
           },
           {
             label: ".NET",
-            path: "/",
+            anchor: "dotnet",
           },
         ],
+        singlePage: true
       },
 
       {
@@ -52,17 +53,18 @@ export default function HamburgerMenu() {
         ],
       },
 
-      {
-        label: "AI and ML",
-        path: "/research-development",
-      },
+      
       {
         label: "IoT",
         children:[
           {label:"Embedded Systems"},
           {label:"Rasberry Pi / Arduino Kits"}
         ]
-      }
+      },
+      {
+        label: "AI and ML",
+        path: "/research-development",
+      },
     ],
   },
 
@@ -89,7 +91,8 @@ export default function HamburgerMenu() {
     ],
     path: "/software-technology-solutions",
     singlePage: true },
-  { label: "Technology Consulting Services",
+  
+    { label: "Technology Consulting Services",
     children:[
       {label:"Software Architecture Design"},
       {label:"Performance Optimization & Refactoring"},
@@ -101,7 +104,7 @@ export default function HamburgerMenu() {
     path: "/corporate-training" },
 ];
 
-  const HEADER_HEIGHT = 206;
+  const HEADER_HEIGHT = 197;
   // slugify helper
   const slug = (text) =>
     text
@@ -169,7 +172,7 @@ export default function HamburgerMenu() {
                 </div>
 
                 {parent.children && (
-                  <ul className="mt-2 ml-4 space-y-2">
+                  <ul className="mt-2 ml-3 space-y-2">
                     {parent.children.map((child, cIdx) => {
                       const childHasChildren = child.children?.length > 0;
 
@@ -188,9 +191,9 @@ export default function HamburgerMenu() {
                           {/* CHILD ROW */}
                           <div className="flex ">
                             {/* + or - icon */}
-                            {childHasChildren && (
+                            {childHasChildren ? (
                               <button
-                                className="text-xl font-bold text-gray-700 ml-2 cursor-pointer"
+                                className="text-xl font-bold text-gray-700 cursor-pointer hover:text-blue-600"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setOpenChild((prev) => ({
@@ -201,9 +204,10 @@ export default function HamburgerMenu() {
                               >
                                 {isOpen ? "–" : "+"}
                               </button>
-                            )}
+                            ) : 
+                            <span className="w-3"></span>}
                             <button
-                              className="text-gray-700 text-base ml-2 hover:text-blue-600 text-left"
+                              className="text-gray-700 text-base ml-2 hover:text-blue-600 text-left cursor-pointer"
                               onClick={() =>
                                 handleNavigate(
                                   child.path || parent.path,

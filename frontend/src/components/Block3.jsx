@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
-export default function CourseCarousel({ items = [] }) {
-  const duplicateItems = Array(100).fill(items).flat();
+export default function CourseCarousel({ items = []}) {
+  const duplicateItems = Array(10).fill(items).flat();
 
   const total = duplicateItems.length;
 
@@ -74,6 +75,7 @@ export default function CourseCarousel({ items = [] }) {
             <div className="block3-c rounded-2xl shadow-lg bg-white p-6 h-full">
               <h6 className="font-bold text-xl mb-3">{item.title}</h6>
               <p className="text-gray-600 text-sm">{item.description}</p>
+              <Link to= {item.service} className='bg-blue-950 text-white rounded-full px-3 py-2 mt-3 inline-block'>Learn more</Link>
             </div>
           </div>
         ))}

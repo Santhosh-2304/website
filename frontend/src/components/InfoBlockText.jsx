@@ -8,7 +8,7 @@ function InfoBlockText({ title, text, image, reverse = false }) {
       }`}
     >
       {/* TEXT AREA */}
-      <div className="w-[600px] px-6 py-8">
+      <div className="w-[600px] px-13 py-10">
         <h5 className="text-3xl font-semibold mb-4">{title}</h5>
         <p className="text-gray-700 leading-relaxed">{text}</p>
       </div>
