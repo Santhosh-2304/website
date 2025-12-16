@@ -7,7 +7,7 @@ function TitleBlock({
   image,
 }) {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center justify-between px-10 py-8 bg-gradient-to-r from-gray-50  to-blue-300 relative overflow-hidden">
+    <div className="w-full flex flex-col md:flex-row items-center justify-between px-10 py-4 bg-gradient-to-r from-gray-50  to-blue-300 relative overflow-hidden">
 
       {/* LEFT CONTENT */}
       <div className= "md:w-3/4 space-y-6">
@@ -15,7 +15,7 @@ function TitleBlock({
           {title}
         </h1>
 
-        <p className="text-lg text-gray-600 leading-relaxed">
+        <p className="text-lg text-gray-600 indent-8 leading-relaxed">
           {description}
         </p>
       </div>

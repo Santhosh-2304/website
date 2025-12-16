@@ -7,19 +7,18 @@ const SoftwareTraining = () => {
     <div>
       <TitleBlock 
         title="Software Training and Services"
-        description="IMMT stands at the forefront of technology-based training and software solutions,
-        empowering individuals and organizations through immersive, hands-on learning and
-        advanced digital services. 
-        IMMT offers dynamic training programs in software development, digital marketing, and
-        emerging tech, tailored for beginners and advanced learners.
+        description="IMMT offers dynamic training programs in software development, digital marketing, and
+        emerging technologies, tailored for beginners and advanced learners.
         Our live project experience and certification courses prepare individuals for real-world
         success while our talent management services streamline resourcing, placement, and
-        career development for enterprise clients."
+        career development for enterprise clients. Choose IMMT to access hands-on
+        workshops, career support, and a strong professional network which ensures
+        businesses find the right talent and learners build robust portfolios."
         image="training.jpg"
       />
     <div className='bg-blue-50 pl-10 pr-10 pt-5'>
       <Block1
-        title="Training & Talent"
+        title="Training & Talent Management"
         content="Our specialized training programs cover software technologies, digital tools, and
         emerging trends. With a practical learning approach, we prepare professionals to
         stay relevant and excel in dynamic IT environments.
@@ -30,7 +29,7 @@ const SoftwareTraining = () => {
         service='/training-talent'
         />
         <Block1
-        title="Academic Training"
+        title="Academic Training Programs"
         content="IMMT partners with colleges and universities to deliver high-quality Academic
         Training Programs that align with modern industry requirements.
         We offer customized curriculum support, faculty development programs, technical

@@ -61,7 +61,7 @@ const Navbar = ({ menuItems = []}) => {
 
 
   return (
-    <div className='bg-gray-200 w-full pt-[10px] pb-[10px]'>
+    <div className='bg-gray-200 w-full pt-[8px] pb-[8px]'>
     <div className="navbar-container flex" ref={navRef} onMouseLeave={handleMouseLeave}>
       <Menu />
       <ul className="navbar-menu flex">

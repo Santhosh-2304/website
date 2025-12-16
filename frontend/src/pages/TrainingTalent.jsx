@@ -6,23 +6,22 @@ const courses = [
   {
     title: "Full Stack Development",
     description:
-      "Master the art of building complete web applications, from front-end interfaces to back-end servers and databases. ",
-    service:'/fullstack'
+      "Our Full-Stack Development courses are engineered to provide end-to-end mastery in building production-grade applications across modern web ecosystems. Each program is curated by industry experts and aligned with real-world software engineering standards, covering everything from frontend architecture to backend engineering, database design, API development, DevOps, and cloud deployment.",
   },
   {
     title: "AI and ML",
     description:
-      "Build fluency in languages like C#, Java, Angular, and JavaScript and evolve as they do.",
+      "Intelligent AI and ML solutions that enable systems to learn, predict, and automate decision-making. Our services include data analysis, predictive modeling, naturallanguage processing, computer vision, and intelligent automation, helping businesses gain actionable insights, improve efficiency, and drive innovation through data-driven intelligence."
   },
   {
     title: "Internet of Things (IoT)",
     description:
-      "From AWS to Google Cloud and everything in between, expand your cloud clout.",
+      "End-to-end IoT solutions that connect devices, sensors, and systems to collect, monitor, and analyze real-time data. From smart applications to industrial IoT platforms, we enable intelligent connectivity, automation, and data-driven decision-making that enhances operational efficiency and business intelligence.",
   },
   {
     title: "Cloud Computing",
     description:
-      "Stop cyber attacks, secure critical systems, and position yourself as the expert.",
+      "Scalable and secure cloud computing solutions that empower organizations to build, deploy, and manage applications efficiently. Our expertise spans cloud architecture design, migration, deployment, and optimization using modern cloud platforms, ensuring high availability, performance, cost efficiency, and seamless digital transformation.",
   },
 
 ];
@@ -31,7 +30,7 @@ const TrainingTalent = () => {
     <div>
       <TitleBlock 
        image="src/assets/training.jpg"
-        title="Training Talent"
+        title="Training and Talent Management"
         description="Our specialized training programs cover software technologies, digital tools, and
                     emerging trends. With a practical learning approach, we prepare professionals to
                     stay relevant and excel in dynamic IT environments.

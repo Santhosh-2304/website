@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CourseCarousel({ items = []}) {
   const duplicateItems = Array(10).fill(items).flat();
-
+  const isHovered = useRef(false);
   const total = duplicateItems.length;
 
   const [index, setIndex] = useState(items.length); // start in the center copy
@@ -28,8 +28,9 @@ export default function CourseCarousel({ items = []}) {
   // AUTO-SLIDE
   useEffect(() => {
     const interval = setInterval(() => {
+      if (!isHovered.current){
       setIndex((prev) => prev + 1);
-    }, 3000);
+    } }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -53,7 +54,8 @@ export default function CourseCarousel({ items = []}) {
   const nextSlide = () => setIndex((prev) => prev + 1);
 
   return (
-    <div className="relative w-full overflow-hidden mt-20 bg-blue-950 pt-5 pb-5">
+    <div className="relative w-full overflow-hidden mt-10 pt-5 pb-5" style={{backgroundImage: `url('/header_bg.jpg')` , backgroundSize: 'cover', backgroundPosition: 'center'}} onMouseEnter={() => (isHovered.current = true)}
+      onMouseLeave={() => (isHovered.current = false)}>
 
       {/* Slider container */}
       <div
@@ -75,7 +77,7 @@ export default function CourseCarousel({ items = []}) {
             <div className="block3-c rounded-2xl shadow-lg bg-white p-6 h-full">
               <h6 className="font-bold text-xl mb-3">{item.title}</h6>
               <p className="text-gray-600 text-sm">{item.description}</p>
-              <Link to= {item.service} className='bg-blue-950 text-white rounded-full px-3 py-2 mt-3 inline-block'>Learn more</Link>
+              
             </div>
           </div>
         ))}

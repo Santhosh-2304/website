@@ -3,19 +3,15 @@ import InfoBlock from "../components/InfoBlock";
 
 export default function TechBlock() {
   return (
-    <div className="TechBlock pl-[50px] bg-gray-50">
+    <div className="TechBlock bg-gray-50">
 
       {/* Application Development */}
       <section id="application-development" className="scroll-section">
         <InfoBlock
           title="Application Development"
-          content={[
-            "Custom Application Development: Bespoke desktop, web, and mobile apps tailored for industry-specific workflows and digital acceleration.",
-            "Agile methodology for rapid prototyping and scalable deployment",
-            "Integration with existing ERP/CRM systems.",
-            "Automation & Control Systems for remote operation and monitoring.",
-            "Cloud & Data Analytics solutions for secure migration and business intelligence."
-          ]}
+          content={
+            "We build high-quality mobile and web applications tailored to your business needs and user experience goals. Our development process focuses on performance, usability, and scalability using modern frameworks and technologies. We create custom apps that integrate seamlessly with existing or new ERP/CRM systems and support future enhancements. From concept to deployment, we ensure smooth project execution with agile methodologies. We also provide UI/UX design, testing, and maintenance to keep your app running flawlessly."
+          }
           image="src/assets/app.jpg"
           nav="/app-development"
         />

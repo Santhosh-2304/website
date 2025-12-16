@@ -59,9 +59,10 @@ export default function HamburgerMenu() {
     children:[
       {label:"App development", path:"/app-development",
         children:[
-          {label:"Mobile App", anchor: "mobile-app-development"},
+          
           {label:"Web App", anchor: "desktop-app-development"},
           {label:"Enterprise App", anchor: "enterprise-app-development"},
+          {label:"Mobile App", anchor: "mobile-app-development"},
           {label:"IOT App", anchor: "iot-app-development"},
           {label:"Cloud Native App", anchor: "cloud-app-development"},
         ]
@@ -70,6 +71,7 @@ export default function HamburgerMenu() {
         children:[
           {label:"Custom Software/Cloud Integrations", anchor: "software-cloud-integrations"},
           {label:"Micro Services", anchor: "microservices"},
+          {label:"DevOps & Automation", anchor: "devops-automation"},
           {label:"Test Automations", anchor: "testing"},
           {label:"AI/ML Agent Development", anchor: "ai-ml"},
           {label:"Software Support / Maintenance / Implementation", anchor: "software-support"}
@@ -80,19 +82,12 @@ export default function HamburgerMenu() {
     singlePage: true },
   
     { label: "Technology Consulting Services",
-    children:[
-      {label:"Software Architecture Design",anchor:"design-architecture"},
-      {label:"Performance Optimization & Refactoring", anchor:"performance"},
-      {label:"Security Audits & Compliance", anchor:"security"},
-      {label:"Process Automation & Digitization", anchor:"process-automation"},
-      {label:"System Integration & API Consulting", anchor:"api"},
-      {label:"Digital Marketing", anchor:"digital-marketing"}
-    ],
+    
     path: "/consulting",
   },
 ];
 
-  const HEADER_HEIGHT = 197;
+  const HEADER_HEIGHT = 183;
   // slugify helper
   const slug = (text) =>
     text

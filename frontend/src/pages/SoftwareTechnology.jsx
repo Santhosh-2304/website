@@ -25,10 +25,11 @@ const SoftwareTechnology = () => {
       image="src\assets\SoftwareTech.jpg"
       title="Software & Technology Solutions"
       description="Empowering businesses through advanced software solutions and cutting-edge IT
-                  services. At IMMT, we blend expertise, innovation, and collaboration to propel your
-                  organization into the digital future. From cloud technologies to AI-driven platforms, our
-                  mission is your success."
-      />
+      services. At IMMT, we blend expertise, innovation, and collaboration to propel your
+      organization into the digital future. From niche technologies to AI-driven platforms, our
+      mission is to unlock your business potential with our end-to-end technology suite,
+      experience seamless digital transformation and robust security."
+            />
       <TechBlock />
     </>
   )
