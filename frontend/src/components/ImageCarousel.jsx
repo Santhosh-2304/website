@@ -34,12 +34,12 @@ function ImageCarousel({ images = [], content = [], interval = 3000 }) {
       />
 
       {/* RIGHT-CORNER OVERLAY (gradient, mild) */}
-      <div className="absolute inset-y-0 right-0 w-[70%] bg-gradient-to-l from-black/70 via-black/40 to-transparent"></div>
+      <div className="absolute inset-y-0 right-0 w-[70%] bg-gradient-to-l from-black/85 via-black/85 to-transparent"></div>
 
 
       {/* TEXT ON TOP */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50%] indent-8 px-10 text-white">
-        <p className="text-xl leading-relaxed text-white">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50%] indent-8 px-10 text-white font-bold">
+        <p className="text-xl leading-relaxed text-white ">
           {content[currentIndex]}
         </p>
       </div>
