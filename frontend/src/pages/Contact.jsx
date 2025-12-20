@@ -39,8 +39,8 @@ const Contact = () => {
 
   return (
     <>
-    <div className='flex pl-15 pt-8 pr-15'>
-      <div className='w-[700px] mr-[50px]'>
+    <div className='flex ml-15 mr-15 pt-8 justify-between'>
+      <div className='w-[700px] '>
         <h1 className='font-bold text-3xl mb-2'>Partner with IMMT to accelerate your digital journey.</h1>
         <h4 className='text-lg'>Whether you’re a business seeking custom technology or an individual looking to build
         future-ready skills, we’re here to help.</h4>
@@ -54,7 +54,7 @@ const Contact = () => {
       ></iframe>
     </div>  
       </div>
-      <div className='w-[600px] ml-[50px] bg-gray-200 rounded-3xl p-8 shadow-xl'>
+      <div className='w-[600px] bg-gray-200 rounded-3xl p-8 shadow-xl'>
         <h1 className='text-2xl font-semibold mb-5 text-blue-800'>Let's chat</h1>
         <form className='space-y-1' onSubmit={handleSubmit}>
           <label className='block font-medium'>Full Name</label>

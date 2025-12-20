@@ -37,7 +37,7 @@ const SoftwareTraining = () => {
         Science, Cloud Computing, Full Stack Development, Cybersecurity, and more.
         Our goal is to enhance the academic environment with innovative learning
         experiences that prepare students for a strong professional future." 
-        image="src\assets\Corporate.jpg"
+        image="Corporate.jpg"
         service='/academic-training'
         />
         <Block1

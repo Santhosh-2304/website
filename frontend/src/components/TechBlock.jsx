@@ -12,7 +12,7 @@ export default function TechBlock() {
           content={
             "We build high-quality mobile and web applications tailored to your business needs and user experience goals. Our development process focuses on performance, usability, and scalability using modern frameworks and technologies. We create custom apps that integrate seamlessly with existing or new ERP/CRM systems and support future enhancements. From concept to deployment, we ensure smooth project execution with agile methodologies. We also provide UI/UX design, testing, and maintenance to keep your app running flawlessly."
           }
-          image="src/assets/app.jpg"
+          image="app.jpg"
           nav="/app-development"
         />
       </section>
@@ -26,7 +26,7 @@ export default function TechBlock() {
             "Application performance optimization.",
             "Network security, backup, and disaster recovery."
           ]}
-          image="src/assets/IT.avif"
+          image="IT.avif"
           nav="/it"
           reverse
         />
@@ -44,7 +44,7 @@ export default function TechBlock() {
             "Technical Support & Maintenance for ongoing updates.",
             "Industry partnerships for R&D and innovation."
           ]}
-          image="src/assets/cons.avif"
+          image="cons.avif"
         />
       </section>
 
@@ -57,7 +57,7 @@ export default function TechBlock() {
             "Big Data analytics, reporting, and dashboard creation.",
             "IoT integration for smarter operations.",
         ]}
-          image="src/assets/Digi.jpg"
+          image="Digi.jpg"
           reverse
         />
       </section>
@@ -72,7 +72,7 @@ export default function TechBlock() {
             "Custom cloud infrastructure design and migration.",
             "Scalable and secure architecture tailored to client needs.",
           ]}
-          image="src/assets/cloud.webp"
+          image="clouds.png"
         />
       </section>
 
@@ -85,7 +85,7 @@ export default function TechBlock() {
             "Protection, monitoring, threat detection, and rapid response.",
             "Digital forensics and recovery services.",
           ]}
-          image="src/assets/cybersecurity.webp"
+          image="cyber.jpg"
           reverse
         />
       </section>

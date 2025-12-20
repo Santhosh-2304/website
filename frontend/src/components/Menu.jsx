@@ -63,8 +63,8 @@ export default function HamburgerMenu() {
           {label:"Web App", anchor: "desktop-app-development"},
           {label:"Enterprise App", anchor: "enterprise-app-development"},
           {label:"Mobile App", anchor: "mobile-app-development"},
-          {label:"IOT App", anchor: "iot-app-development"},
           {label:"Cloud Native App", anchor: "cloud-app-development"},
+          {label:"IOT App", anchor: "iot-app-development"},
         ]
       },
       {label:"Managed IT services", path:"/it",

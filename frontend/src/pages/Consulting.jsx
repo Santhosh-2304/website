@@ -29,13 +29,13 @@ const Consulting = () => {
     We design modern, secure, and future-ready technology architectures that reduce risks and optimize workflows.
     We help organizations adopt digital transformation through automation, integration, and process improvement.
     Our consulting empowers you to make informed technology decisions that maximize ROI."
-    image="consulting.jpg"
+    image="Corp.jpg"
     />
     <section id="design-architecture" className="scroll-section">
         <InfoBlock
           title="Software Architecture & Design"
           content="We design robust, scalable, and future-ready software architectures tailored to your business requirements. Our team ensures optimal system performance, maintainability, and flexibility through modern architectural patterns. We help you build technology foundations that support long-term growth and innovation."
-          image="src/assets/app.jpg"
+          image="app.jpg"
         />
       </section>
 
@@ -44,7 +44,7 @@ const Consulting = () => {
         <InfoBlock
           title="Performance Optimization & Refactoring" 
           content="We analyze your existing systems to identify performance bottlenecks and inefficiencies. Our refactoring approach improves speed, stability, and overall code quality without disrupting functionality.Experience faster execution, reduced resource usage, and enhanced system reliability."
-          image="src/assets/IT.avif"
+          image="IT.avif"
           reverse
         />
       </section>
@@ -55,7 +55,7 @@ const Consulting = () => {
           title="Security Audits & Compliance"
           content=
             "We conduct comprehensive security assessments to identify vulnerabilities across applications and infrastructure. Our experts ensure compliance with industry standards such as ISO, GDPR, and OWASP. Strengthen your digital environment with actionable recommendations and best-practice security frameworks."
-          image="src/assets/cons.avif"
+          image="cons.avif"
         />
       </section>
 
@@ -65,7 +65,7 @@ const Consulting = () => {
           title="Process Automation & Digitalisation"
           content=
             "Transform manual workflows into efficient automated systems using modern tools and AI-driven solutions. Reduce operational costs, eliminate human error, and speed up business processes.We help organizations transition smoothly into digitally empowered operations."
-          image="src/assets/Digi.jpg"
+          image="Digi.jpg"
           reverse
         />
       </section>
@@ -76,7 +76,7 @@ const Consulting = () => {
           title="System Integration & API Development"
           content=
             "We integrate your existing systems, tools, and platforms to ensure seamless data flow and communication. Our API consulting services include designing secure, scalable APIs and optimizing existing integrations. Achieve unified operations with reduced silos and improved system connectivity."
-          image="src/assets/cloud.webp"
+          image="cloud.webp"
         />
       </section>
       <section id="digital-marketing"  className="scroll-section">
@@ -84,7 +84,7 @@ const Consulting = () => {
           title="Digital Marketing"
           content=
             "We help businesses grow online through targeted digital marketing strategies, including SEO, SEM, and content marketing. Our approach focuses on increasing brand visibility, driving quality traffic, and boosting conversions. Stay ahead with data-driven campaigns tailored to your audience and business goals."
-          image="src/assets/cloud.webp"
+          image="cloud.webp"
           reverse
         />
       </section>

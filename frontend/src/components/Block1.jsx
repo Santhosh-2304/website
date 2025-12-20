@@ -4,7 +4,7 @@ import ScrollAnimate from './ScrollFade'
 
 function Block1({title, content, image, service }) {
   return (
-        <div className='block1-container'>
+        <div className='block1-container flex justify-between items-center mb-20 mt-20'>
         <div className='flex flex-col gap-[8px] w-[900px]'>
             <h3 className='text-3xl font-bold '>{title}</h3>
             <p  className='text-xl text-gray-200 indent-8'>{content}</p>

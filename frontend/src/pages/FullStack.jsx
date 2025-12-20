@@ -44,7 +44,7 @@ const FullStack = () => {
           applications using MongoDB, Express.js, React, and Node.js. This hands-on training
           follows a project-driven approach, enabling participants to understand and implement
           end-to-end JavaScript development."
-          image="src/assets/app.jpg"
+          image="app.jpg"
         />
       </section>
 
@@ -57,7 +57,7 @@ const FullStack = () => {
           scalable, corporate-ready web application development with TypeScript and Angular
           architecture."
           
-          image="src/assets/IT.avif"
+          image="IT.avif"
           reverse
         />
       </section>
@@ -68,20 +68,12 @@ const FullStack = () => {
           title="Python Full Stack Development Training"
           content=
             "This program covers both front-end and back-end development, powered by Python and modern web frameworks like Django or Flask. Ideal for beginners and professionals aiming for scalable, secure application development. Participants become proficient in building full-stack applications using Python-basedback-end systems combined with polished front-end interfaces."     
-          image="src/assets/cons.avif"
+          image="cons.avif"
         />
       </section>
 
       {/* Digital Transformation */}
-      <section id="dotnet" className="scroll-section">
-        <InfoBlock
-          title=".NET Full Stack Training & Development"
-          content=
-            "Our .NET Full Stack program focuses on enterprise application development using ASP.NET Core, C#, and modern front-end technologies. Learners gain the expertise to build robust, secure, and scalable enterprise solutionsaligned with modern .NET development standards."
-          image="src/assets/Digi.jpg"
-          reverse
-        />
-      </section>
+      
 
       {/* Cloud */}
       <section id="java" className="scroll-section">
@@ -89,7 +81,17 @@ const FullStack = () => {
           title="Java Full Stack Development Training"
           content=
             "This program equips learners with complete full-stack skills using Core Java, Advanced Java, Spring Boot, and a modern front-end framework. Participants gain a comprehensive understanding of Java full-stack development, enabling them to build clean, modular, production-ready applications."
-          image="src/assets/cloud.webp"
+          image="clouds.png"
+          reverse
+        />
+      </section>
+      <section id="dotnet" className="scroll-section">
+        <InfoBlock
+          title=".NET Full Stack Training & Development"
+          content=
+            "Our .NET Full Stack program focuses on enterprise application development using ASP.NET Core, C#, and modern front-end technologies. Learners gain the expertise to build robust, secure, and scalable enterprise solutionsaligned with modern .NET development standards."
+          image="Digi.jpg"
+          
         />
       </section>
 

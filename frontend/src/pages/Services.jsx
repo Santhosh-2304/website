@@ -30,7 +30,7 @@ const Services = () => {
                   services. At IMMT, we blend expertise, innovation, and collaboration to propel your
                   organization into the digital future. From cloud technologies to AI-driven platforms, our
                   mission is your success." 
-        image="src\assets\Corporate.jpg"
+        image="Corporate.jpg"
         service='/software-technology-solutions'
         />
         <Block1

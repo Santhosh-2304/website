@@ -22,7 +22,7 @@ const SoftwareTechnology = () => {
   return (
     <>
       <TitleBlock 
-      image="src\assets\SoftwareTech.jpg"
+      image="SoftwareTech.jpg"
       title="Software & Technology Solutions"
       description="Empowering businesses through advanced software solutions and cutting-edge IT
       services. At IMMT, we blend expertise, innovation, and collaboration to propel your

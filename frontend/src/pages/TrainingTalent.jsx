@@ -29,7 +29,7 @@ const TrainingTalent = () => {
   return (
     <div>
       <TitleBlock 
-       image="src/assets/training.jpg"
+       image="training.jpg"
         title="Training and Talent Management"
         description="Our specialized training programs cover software technologies, digital tools, and
                     emerging trends. With a practical learning approach, we prepare professionals to
@@ -47,7 +47,7 @@ const TrainingTalent = () => {
             soft skill enhancement, and interview preparation.
             With dedicated mentorship and strong industry collaborations, we ensure that every
             participant becomes job-ready and equipped to excel in the world of IT."
-        image="src/assets/cons.avif"
+        image="cons.avif"
       />
 
       <InfoBlock
@@ -60,7 +60,7 @@ const TrainingTalent = () => {
                 We help professionals grow in their careers through advanced upskilling, curated
                 learning paths, cross-functional training, and direct placement support with top
                 technology companies."
-        image="src/assets/web.jpg"
+        image="web.jpg"
         reverse
       />
       <Block3 items = {courses} />

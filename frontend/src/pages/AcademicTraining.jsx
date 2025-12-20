@@ -5,7 +5,7 @@ const AcademicTraining = () => {
   return (
     <div>
       <TitleBlock 
-        image="src/assets/training.jpg"
+        image="training.jpg"
         title="Academic Training Programs"
         description="IMMT partners with colleges and universities to deliver high-quality Academic Training
         Programs that align with modern industry requirements. We offer customized curriculum
@@ -25,7 +25,7 @@ const AcademicTraining = () => {
                 IoT, cloud applications, mobile development, automation, and software engineering.
                 We ensure that every project reflects innovation, technical depth, and real-world
                 applicability."
-        image="src/assets/cons.avif"
+        image="cons.avif"
       />
 
       <InfoBlock
@@ -35,7 +35,7 @@ const AcademicTraining = () => {
         and engineers on live projects and learn practical problem-solving skills. Our internship
         programs enhance technical skills, teamwork, communication abilities, and overall
         professional readiness, paving the way for successful career opportunities."
-        image="src/assets/web.jpg"
+        image="web.jpg"
         reverse
       />
     </div>

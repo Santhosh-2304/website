@@ -4,7 +4,7 @@ const CorporateTraining = () => {
   return (
     <div>
       <TitleBlock 
-        image="src/assets/Corporate.jpg"
+        image="Corporate.jpg"
         title="Corporate Training"
         description="We provide customizable Corporate Training Solutions tailored to meet
                     organizational skill development needs.
