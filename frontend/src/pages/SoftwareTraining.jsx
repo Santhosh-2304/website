@@ -25,7 +25,7 @@ const SoftwareTraining = () => {
         We connect organizations with skilled professionals and deliver end-to-end
         workforce solutions. Our resourcing services ensure the right talent is aligned with
         the right opportunity." 
-        image="training.jpg"
+        image="training&talent.png"
         service='/training-talent'
         />
         <Block1

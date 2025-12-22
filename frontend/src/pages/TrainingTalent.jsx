@@ -29,7 +29,7 @@ const TrainingTalent = () => {
   return (
     <div>
       <TitleBlock 
-       image="training.jpg"
+       image="training&talent.png"
         title="Training and Talent Management"
         description="Our specialized training programs cover software technologies, digital tools, and
                     emerging trends. With a practical learning approach, we prepare professionals to

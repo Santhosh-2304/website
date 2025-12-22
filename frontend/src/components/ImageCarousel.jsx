@@ -34,20 +34,20 @@ function ImageCarousel({ images = [], content = [], interval = 3000 }) {
       />
 
       {/* RIGHT-CORNER OVERLAY (gradient, mild) */}
-      <div className="absolute inset-y-0 right-0 w-[70%] bg-gradient-to-l from-black/85 via-black/85 to-transparent"></div>
+      <div className="absolute inset-y-0 right-0 md:w-[70%] md:bg-gradient-to-l from-black/85 via-black/85 to-transparent w-full bg-gradient-to-l from-black/85 via-black/85 to-transparent"></div>
 
 
       {/* TEXT ON TOP */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50%] indent-8 px-10 text-white font-bold">
-        <p className="text-xl leading-relaxed text-white ">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 md:w-[50%] indent-8 px-10 text-white font-bold">
+        <p className="md:text-xl text-sm leading-relaxed text-white ">
           {content[currentIndex]}
         </p>
       </div>
       <button onClick={goPrev} 
-        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full cursor-pointer" >
+        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/80 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-black/40 " >
          ❮ 
       </button> 
-      <button onClick={goNext} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full cursor-pointer" >
+      <button onClick={goNext} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/80 text-white px-3 py-2 rounded-full cursor-pointer hover:bg-black/40" >
          ❯ 
       </button>
     </div>

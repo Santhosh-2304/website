@@ -17,10 +17,6 @@ body{
   z-index: 9999;
 }
 
-.header h1{
-  padding-Left:"10px";
-  margin-left: 9px;
-}
 .header-div {
       background-image: url('/header_bg.jpg');
       width: 100%;
@@ -197,6 +193,13 @@ body{
     padding: 40px;
     gap: 40px;
 }
+@media (max-width: 768px) {
+  .block1-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
 .btn-block1{
     color: white;
     padding: 15px 40px;
@@ -208,6 +211,13 @@ body{
     cursor: pointer;
 }
 
+@media (max-width: 968px) {
+  .btn-block1 {
+     width: 100px;
+     padding: 5px 15px;
+     
+  }
+}
 
 .block3-c {
   border-radius: 25px;

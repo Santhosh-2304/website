@@ -66,8 +66,8 @@ export default function Header() {
       </div>     
         <div className='header-div' >
           <Link to='/' className='flex' >
-            <img src='logo.png' style={{height:"110px", width:"125px", marginTop:"0px"}}></img>            
-            <h1  className='mt-7 font-bold text-4xl text-white' style={{ marginTop:"40px",marginLeft:"70px"}}>INNOVATIONAL METTLE MINDS TECH PRIVATE LIMITED</h1>
+            <img src='logo.png' className='md:h-[110px] md:w-[125px] h-20 w-20'></img>            
+            <h1 className='md:mt-7 font-bold md:text-4xl text-white md:ml-25 pt-2 text-lg text-center mr-5'>INNOVATIONAL METTLE MINDS TECH PRIVATE LIMITED</h1>
           </Link>
         </div>
         <Navbar  menuItems={menuItems}/>

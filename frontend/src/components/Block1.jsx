@@ -4,17 +4,17 @@ import ScrollAnimate from './ScrollFade'
 
 function Block1({title, content, image, service }) {
   return (
-        <div className='block1-container flex justify-between items-center mb-20 mt-20'>
-        <div className='flex flex-col gap-[8px] w-[900px]'>
-            <h3 className='text-3xl font-bold '>{title}</h3>
-            <p  className='text-xl text-gray-200 indent-8'>{content}</p>
-            <Link to= {service} className='btn-block1 mt-3'>Learn more</Link>
+        <div className='block1-container md:flex md:justify-between items-center md:mb-20 md:mt-20'>
+        <div className='md:flex md:flex-col md:gap-[8px] md:w-[900px]'>
+            <h3 className='md:text-3xl font-bold text-xl'>{title}</h3>
+            <p  className='md:text-xl text-gray-200 indent-8 mb-4'>{content}</p>
+            <Link to= {service} className='btn-block1  '>Learn more</Link>
         </div>
 
         <ScrollAnimate>
             <img
             src={image}
-            className="rounded-2xl w-[450px]  object-cover "
+            className="rounded-2xl md:w-[450px] object-cover "
             />
         </ScrollAnimate>
        

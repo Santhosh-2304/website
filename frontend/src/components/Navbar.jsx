@@ -61,7 +61,7 @@ const Navbar = ({ menuItems = []}) => {
 
 
   return (
-    <div className='bg-gray-200 w-full pt-[8px] pb-[8px]'>
+    <div className='bg-gray-200 w-full md:pt-[8px] md:pb-[8px] md:block '>
     <div className="navbar-container flex" ref={navRef} onMouseLeave={handleMouseLeave}>
       <Menu />
       <ul className="navbar-menu flex">
@@ -71,7 +71,7 @@ const Navbar = ({ menuItems = []}) => {
               className="navbar-item"
               onMouseEnter={() => handleMouseEnter(index)}
             >              
-              <Link to={item.path} className="navbar-link" onClick={closeAllMenus}>
+              <Link to={item.path} className="navbar-link" onClick={closeAllMenus} >
                 {item.label}
                 {item.children && (
                   <span className="arrow">

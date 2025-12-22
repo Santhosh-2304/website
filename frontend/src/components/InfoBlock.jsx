@@ -3,11 +3,10 @@ import ScrollAnimate from "./ScrollFade";
 import { Link } from "react-router-dom";
 function InfoBlock({ title, content, image, reverse = false, nav }) {
   return (
-    <div className={`flex items-center justify-center gap-15 ml-10 pt-8 ${reverse ? "flex-row-reverse " : ""}`}>
-      
-  
-      <div className="w-[620px] px-6">
-        <h5 className="text-3xl font-semibold mb-3">{title}</h5>
+    <div className={`md:flex items-center justify-center gap-15 ml-10 pt-8 ${reverse ? "flex-row-reverse " : ""}`}>
+ 
+      <div className="md:w-[620px] md:px-6">
+        <h5 className="md:text-3xl font-semibold mb-3 text-xl">{title}</h5>
 
       
         {Array.isArray(content) && nav ? (
@@ -34,7 +33,7 @@ function InfoBlock({ title, content, image, reverse = false, nav }) {
       <ScrollAnimate>
         <img
           src={image}
-          className="rounded-2xl w-[500px] h-[300px] object-cover mx-8"
+          className="rounded-2xl md:w-[500px] md:h-[300px] object-cover md:mx-8 mt-2"
         />
       </ScrollAnimate>
     </div>
