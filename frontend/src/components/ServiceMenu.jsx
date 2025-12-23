@@ -23,7 +23,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
       <path
         d="M6 8l4 4 4-4"
         stroke="currentColor"
-        strokeWidth="4.8"
+        strokeWidth="3.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -71,7 +71,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
     { label: "Contact Us", path: "/contact" },
   ];
 
-  /* ---------- Header Height ---------- */
+  
   useEffect(() => {
     const header = document.getElementById("header");
 
@@ -84,7 +84,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
-  /* ---------- Helpers ---------- */
+  
   const slug = (text) =>
     text
       .toLowerCase()
@@ -101,7 +101,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
   
   return (
     <>
-      {/* Toggle Button */}
+      
       <button
         onClick={() => onToggle()}
         className="relative z-[999] md:mr-4 mr-2 "
@@ -109,7 +109,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
         <i className={`fa-solid fa-grip text-xl mt-1 ${isOpen ? "text-blue-600":""}`}></i>
       </button>
 
-      {/* Side Panel */}
+      
       <aside
         ref={panelRef}
         className={`fixed right-0 z-[999] bg-gradient-to-r from-blue-200 to-gray-50 shadow-2xl
@@ -129,17 +129,17 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
 
               return (
                 <li key={pIdx}>
-                  {/* Parent Row */}
+                 
                   <div className="flex items-center">
-                    {/* Parent text (navigate) */}
+                    
                     <button
-                      className="text-gray-900 font-semibold text-left hover:text-blue-600 mr-2"
+                      className="text-gray-900 font-medium text-left hover:text-blue-600 mr-2"
                       onClick={() => handleNavigate(parent.path)}
                     >
                       {parent.label}
                     </button>
 
-                    {/* Parent arrow (toggle) */}
+                    
                     {parent.children && (
                       <button
                         onClick={(e) => {
@@ -155,7 +155,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
                     )}
                   </div>
 
-                  {/* Parent Dropdown */}
+                  
                   {parent.children && (
                     <ul
                       className={`ml-3 mt-2 space-y-2 overflow-hidden transition-all duration-300
@@ -168,9 +168,9 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
 
                         return (
                           <li key={cIdx}>
-                            {/* Child Row */}
+                            
                             <div className="flex items-center">
-                              {/* + / – for grandchildren */}
+                              
                               {hasGrandChildren ? (
                                 <button
                                   className="text-lg font-bold w-4"
@@ -188,7 +188,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
                                 <span className="w-4" />
                               )}
 
-                              {/* Child text */}
+                              
                               <button
                                 className="ml-2 text-gray-700 text-sm hover:text-blue-600 text-left"
                                 onClick={() => handleNavigate(child.path)}
@@ -197,7 +197,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
                               </button>
                             </div>
 
-                            {/* Grandchildren */}
+                           
                             {hasGrandChildren && isChildOpen && (
                               <ul className="ml-6 mt-2 space-y-1">
                                 {child.children.map((sub, sIdx) => (
