@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 
-export default function HamburgerMenu() {
-  const [open, setOpen] = useState(false);
+export default function HamburgerMenu({ isOpen, onToggle, onNavigate }) {
+  
   const panelRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
-  const closeMenu = () => setOpen(false);
   const [openChild, setOpenChild] = useState({});
+  const [headerHeight, setHeaderHeight] = useState(0);
   const menuData = [
   {
     label: "Software training",
@@ -87,8 +87,22 @@ export default function HamburgerMenu() {
   },
 ];
 
-  const HEADER_HEIGHT = 183;
+ 
   // slugify helper
+
+  useEffect(() => {
+  const header = document.getElementById("header");
+
+  const updateHeight = () => {
+    if (header) setHeaderHeight(header.offsetHeight);
+  };
+
+  updateHeight();
+  window.addEventListener("resize", updateHeight);
+
+  return () => window.removeEventListener("resize", updateHeight);
+}, []);
+
   const slug = (text) =>
     text
       .toLowerCase()
@@ -99,7 +113,7 @@ export default function HamburgerMenu() {
 
   // handle navigation
   const handleNavigate = (basePath, hash = "") => {
-    closeMenu();
+    onNavigate();
 
     const full = hash ? `${basePath}#${hash}` : basePath;
 
@@ -118,33 +132,33 @@ export default function HamburgerMenu() {
   return (
     <>
       <button
-        onClick={() => setOpen((s) => !s)}
+        onClick={() => onToggle()}
         aria-label="Menu"
-        className="relative z-[999] ml-4 mr-6 flex items-center cursor-pointer"
+        className="relative z-[999] ml-4 mr-9 flex items-center cursor-pointer"
       >
-        <i className={`fa-solid fa-bars text-2xl ${open ? "text-blue-600":""}`}></i>
+        <i className={`fa-solid fa-bars md:text-2xl text-xl p-1 md:p-0 ${isOpen ? "text-blue-600":""}`}></i>
       </button>
 
       {/* Side panel */}
       <aside
         ref={panelRef}
-        className={`fixed left-0 z-[999] bg-gradient-to-r from-blue-200 to-gray-50 shadow-2xl w-[280px] 
+        className={`sidebar fixed left-0 z-[999] bg-gradient-to-r from-blue-200 to-gray-50 shadow-2xl md:w-[280px] w-[220px]
         transition-transform duration-300 
-        ${open ? "translate-x-0" : "-translate-x-full"}`}
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         style={{
-          top: HEADER_HEIGHT + "px",
-          height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+          top: `${headerHeight}px`,
+          height: `calc(100vh - ${headerHeight}px)`,
         }}
       >
         <div className="h-full flex flex-col">
           {/* header inside panel */}
-        <div className="h-full overflow-y-auto px-5 py-6">
+        <div className="h-full overflow-y-auto md:px-5 md:py-6 px-3 py-4">
           <ul className="space-y-6">
             {menuData.map((parent, pIdx) => (
               <li key={pIdx}>
                 {/* Parent */}
                 <div
-                  className="text-gray-900 font-semibold text-lg cursor-pointer hover:text-blue-600 "
+                  className="text-gray-900 font-semibold md:text-lg cursor-pointer hover:text-blue-600 "
                   onClick={() =>
                     parent.singlePage
                       ? handleNavigate(parent.path, parent.defaultSection || "")
@@ -190,7 +204,7 @@ export default function HamburgerMenu() {
                             ) : 
                             <span className="w-3"></span>}
                             <button
-                              className="text-gray-700 text-base ml-2 hover:text-blue-600 text-left cursor-pointer"
+                              className="text-gray-700 text-sm ml-2 hover:text-blue-600 text-left cursor-pointer"
                               onClick={() =>
                                 handleNavigate(
                                   child.path || parent.path,

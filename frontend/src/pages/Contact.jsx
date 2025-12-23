@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <>
-    <div className='md:flex md:ml-15 md:mr-15 md:pt-5 md:justify-between ml-4 mr-4'>
+    <div className='md:flex md:ml-15 md:mr-15 md:pt-5 md:justify-between ml-4 mr-4 mb-25'>
       <div className='md:w-[750px] mt-1'>
         <h1 className='font-bold text-2xl mb-1'>Partner with IMMT to accelerate your digital journey.</h1>
         <h4 className='text-base indent-10'>Whether you’re a business seeking custom technology or an individual looking to build

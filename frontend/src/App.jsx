@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -22,6 +23,20 @@ import { Toaster } from "react-hot-toast";
 
 
 const App = () => {
+  useEffect(() => {
+  const header = document.getElementById("header");
+
+  const setOffset = () => {
+    if (!header) return;
+    document.body.style.paddingTop = `${header.offsetHeight}px`;
+  };
+
+  setOffset();
+  window.addEventListener("resize", setOffset);
+
+  return () => window.removeEventListener("resize", setOffset);
+}, []);
+
   return (
     <>
     <Header />

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import '../styles.css';
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
+import ServiceMenu from './ServiceMenu';
 
 const ArrowIcon = ({ open }) => (
   <svg
@@ -29,6 +30,7 @@ const Navbar = ({ menuItems = []}) => {
   const [openSubIndex, setOpenSubIndex] = useState(null);
   const closeTimer = useRef(null);
   const navRef = useRef(null);
+  const [activePanel, setActivePanel] = useState(null);
   const handleMouseEnter = (index) => {
     clearTimeout(closeTimer.current);
     setOpenIndex(index);
@@ -56,6 +58,7 @@ const Navbar = ({ menuItems = []}) => {
   const closeAllMenus = () => {
   setOpenIndex(null);
   setOpenSubIndex(null);
+  setActivePanel(null);
   clearTimeout(closeTimer.current);
 };
 
@@ -63,7 +66,13 @@ const Navbar = ({ menuItems = []}) => {
   return (
     <div className='bg-gray-200 w-full md:pt-[8px] md:pb-[8px] md:block '>
     <div className="navbar-container flex" ref={navRef} onMouseLeave={handleMouseLeave}>
-      <Menu />
+      <Menu 
+      isOpen={activePanel === "menu"}
+      onToggle={() =>
+      setActivePanel((prev) => (prev === "menu" ? null : "menu"))
+      }
+      onNavigate={() => setActivePanel(null)} 
+      />
       <ul className="navbar-menu flex">
           {menuItems.map((item, index) => (
             <li
@@ -71,7 +80,7 @@ const Navbar = ({ menuItems = []}) => {
               className="navbar-item"
               onMouseEnter={() => handleMouseEnter(index)}
             >              
-              <Link to={item.path} className="navbar-link" onClick={closeAllMenus} >
+              <Link to={item.path} className="navbar-link font-bold pr-5 text-lg md:block hidden" onClick={closeAllMenus} >
                 {item.label}
                 {item.children && (
                   <span className="arrow">
@@ -143,6 +152,15 @@ const Navbar = ({ menuItems = []}) => {
             </li>
           ))}
         </ul>
+        <div className='md:hidden block mr-1 fixed right-0'>
+        <ServiceMenu 
+        isOpen={activePanel === "service"}
+        onToggle={() =>
+          setActivePanel((prev) => (prev === "service" ? null : "service"))
+        }
+        onNavigate={() => setActivePanel(null)}
+        />
+        </div>
     </div>
     </div>
   );

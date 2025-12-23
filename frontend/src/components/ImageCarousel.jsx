@@ -30,7 +30,7 @@ function ImageCarousel({ images = [], content = [], interval = 3000 }) {
       <img
         src={images[currentIndex]}
         alt="carousel"
-        className="w-full h-[calc(100vh-183px)] object-cover transition-opacity duration-700"
+        className="w-full h-[calc(100vh-183px)] md:object-cover transition-opacity duration-700"
       />
 
       {/* RIGHT-CORNER OVERLAY (gradient, mild) */}

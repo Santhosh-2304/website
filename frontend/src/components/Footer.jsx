@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className="footer bg-gray-950 text-white flex justify-center mt-3">
+    <div className="footer bg-gray-950 text-white flex justify-center mt-5">
       <div className="text-center text-xs pt-2 pb-2">
         <p className='font-bold text-sm'>IMMT – Innovating Today. Empowering Tomorrow.</p>
         <p>© 2025 IMMT | All Rights Reserved.</p>

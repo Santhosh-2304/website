@@ -4,12 +4,13 @@ body{
     font-family: 'Poppins';
     margin: 0;  
     overflow-x: hidden;
-    padding-top: 183px;
+    
 }
+
 :root{
     --shadow: 0 8px 30px rgba(16,34,40,0.08);
 }
-.header{
+#header{
   position: fixed;
   top: 0;
   left: 0;
@@ -50,18 +51,6 @@ body{
 
 .navbar-item {
   position: relative;
-}
-
-.navbar-link {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 680;
-  color: #111827;
-  padding: 16px 10px;
-  font-family: 'Poppins';
-  transition: color 0.2s ease;
 }
 
 .navbar-link:hover {
@@ -180,7 +169,8 @@ body{
   margin-left: 10px;
   font-size: 10px;
 }
-
+@media (min-width:768px) {
+  
 .block1-container{
     display: flex;
     flex-direction: row;
@@ -193,13 +183,19 @@ body{
     padding: 40px;
     gap: 40px;
 }
+}
+
 @media (max-width: 768px) {
   .block1-container {
     flex-direction: column;
-    gap: 16px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    color: white;
+    background: linear-gradient(135deg,rgba(50, 107, 173, 0.842),rgb(9, 7, 56));
+    padding: 15px;
   }
-}
 
+}
 .btn-block1{
     color: white;
     padding: 15px 40px;

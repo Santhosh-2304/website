@@ -16,7 +16,7 @@ const SoftwareTraining = () => {
         businesses find the right talent and learners build robust portfolios."
         image="training.jpg"
       />
-    <div className='bg-blue-50 pl-10 pr-10 pt-5'>
+    <div className='bg-blue-50 md:pl-10 md:pr-10 md:pt-5 p-2'>
       <Block1
         title="Training & Talent Management"
         content="Our specialized training programs cover software technologies, digital tools, and

@@ -14,7 +14,7 @@ const Services = () => {
         equipping you to thrive in an ever-evolving digital landscape."
         image="training.jpg"
         />
-    <div className='bg-blue-50 pl-10 pr-10 pt-5'>
+    <div className='bg-blue-50 md:pl-10 md:pr-10 md:pt-5 p-2'>
       <Block1
         title="Software Training Services"
         content="IMMT stands at the forefront of technology-based training and software solutions,
