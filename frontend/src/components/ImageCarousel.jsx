@@ -38,7 +38,7 @@ function ImageCarousel({ images = [], content = [], interval = 3000 }) {
 
 
       {/* TEXT ON TOP */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 md:w-[50%] indent-8 px-10 text-white font-bold">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 md:w-[50%] indent-8 px-10 text-white font-bold w-[99%]">
         <p className="md:text-xl text-sm leading-relaxed text-white ">
           {content[currentIndex]}
         </p>

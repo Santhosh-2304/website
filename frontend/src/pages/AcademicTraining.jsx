@@ -3,7 +3,7 @@ import InfoBlock from '../components/InfoBlock'
 import TitleBlock from '../components/TitleBlock'
 const AcademicTraining = () => {
   return (
-    <div>
+    <>
       <TitleBlock 
         image="training.jpg"
         title="Academic Training Programs"
@@ -38,7 +38,7 @@ const AcademicTraining = () => {
         image="web.jpg"
         reverse
       />
-    </div>
+    </>
   )
 }
 

@@ -104,16 +104,16 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
       
       <button
         onClick={() => onToggle()}
-        className="relative z-[999] md:mr-4 mr-2 "
+        className={`relative z-[999] ${isOpen ? "bg-gray-400 px-1 md:px-0 rounded-md " : ""}`}
       >
-        <i className={`fa-solid fa-grip text-xl mt-1 ${isOpen ? "text-blue-600":""}`}></i>
+        <i className={`fa-solid fa-grip text-xl mt-1  ${isOpen ? "text-white":""}`}></i>
       </button>
 
       
       <aside
         ref={panelRef}
         className={`fixed right-0 z-[999] bg-gradient-to-r from-blue-200 to-gray-50 shadow-2xl
-        md:w-[280px] w-[170px] transition-transform duration-300
+         w-[237px] transition-transform duration-300
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         style={{
           top: `${headerHeight}px`,
@@ -173,7 +173,7 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
                               
                               {hasGrandChildren ? (
                                 <button
-                                  className="text-lg font-bold w-4"
+                                  className="text-sm font-bold w-4"
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     setOpenChild((prev) => ({

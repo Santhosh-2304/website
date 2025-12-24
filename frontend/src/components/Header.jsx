@@ -55,13 +55,13 @@ export default function Header() {
 
   return (
     <div id='header' > 
-    <div className='socialmediatool bg-gradient-to-r from-black via-gray-600 to-gray-300 pt-1 h-[30px] w-full '>
-       <ul className='block text-right px-2'>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-instagram md:text-2xl "></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-youtube md:text-2xl"></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-linkedin md:text-2xl"></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-facebook md:text-2xl"></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-x-twitter md:text-2xl"></i></li>
+    <div className='socialmediatool bg-gradient-to-r from-black via-gray-600 to-gray-300 w-full md:pt-1'>
+       <ul className='block text-right md:px-2'>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-instagram md:text-2xl text-lg "></i></li>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-youtube md:text-2xl text-lg "></i></li>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-linkedin md:text-2xl text-lg "></i></li>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-facebook md:text-2xl text-lg "></i></li>
+          <li style={{display:'inline-block'}}><i className="fa-brands fa-x-twitter md:text-2xl text-lg"></i></li>
         </ul>  
       </div>     
         <div className='header-div' >

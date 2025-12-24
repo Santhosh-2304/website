@@ -134,9 +134,9 @@ export default function HamburgerMenu({ isOpen, onToggle, onNavigate }) {
       <button
         onClick={() => onToggle()}
         aria-label="Menu"
-        className="relative z-[999] ml-4 mr-9 flex items-center cursor-pointer"
+        className={`relative z-[999] md:ml-4 md:mr-9 ml-1 flex items-center cursor-pointer md:bg-transparent ${isOpen ? "bg-gray-400 md:px-0 px-1 rounded-md" : ""}`}
       >
-        <i className={`fa-solid fa-bars md:text-2xl text-xl p-1 md:p-0 ${isOpen ? "text-blue-600":""}`}></i>
+        <i className={`fa-solid fa-bars md:text-2xl text-xl p-1 md:p-0 ${isOpen ? "md:text-blue-600 text-white":""}`}></i>
       </button>
 
       {/* Side panel */}
