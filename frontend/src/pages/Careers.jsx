@@ -8,7 +8,7 @@ const Careers = () => {
       <TitleBlock 
     title="Careers at IMMT"
     description="Join our dynamic team and help shape the future of technology. We are looking for passionate individuals who thrive in a collaborative environment and are eager to make an impact. Explore our current job openings and find the perfect role that matches your skills and aspirations. At our company, we value innovation, diversity, and professional growth. Take the next step in your career with us!"
-    image="Corp.jpg"
+    image="Careers.png"
     />
     <InfoBlock
         title="Join Our Team"

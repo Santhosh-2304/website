@@ -7,7 +7,7 @@ function Footer() {
         <p className='font-bold text-sm'>IMMT – Innovating Today. Empowering Tomorrow.</p>
         <p>© 2025 IMMT | All Rights Reserved.</p>
         <p>Services: Software Development | Software Training & Placement | Consulting | IoT | R&D | Digital Marketing</p>
-        <p>Connect: <a href="https://www.linkedin.com" className='hover:underline'>LinkedIn</a> | <a href="https://www.facebook.com" className='hover:underline'>Facebook</a> | <a href="https://www.instagram.com" className='hover:underline'>Instagram</a></p>
+        <p>Connect: <a href="https://www.linkedin.com" className='hover:underline'>LinkedIn</a> | <a href="https://www.facebook.com" className='hover:underline'>Facebook</a> | <a href="https://www.instagram.com/immt.services/" target="_blank" rel="noopener noreferrer"className='hover:underline'>Instagram</a></p>
       </div>
     </div>
   )

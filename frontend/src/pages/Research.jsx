@@ -5,7 +5,7 @@ const Research = () => {
   return (
     <>
     <TitleBlock 
-      image="IT.jpg"
+      image="Research_Development.png"
       title="Research and Innovation"
       description="At the heart of IMMT lies a commitment to innovation. Our R&D division focuses on
       exploring emerging software solutions for technologies like the Internet of Things (IoT),

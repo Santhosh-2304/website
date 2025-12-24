@@ -57,11 +57,11 @@ export default function Header() {
     <div id='header' > 
     <div className='socialmediatool bg-gradient-to-r from-black via-gray-600 to-gray-300 w-full md:pt-1'>
        <ul className='block text-right md:px-2'>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-instagram md:text-2xl text-lg "></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-youtube md:text-2xl text-lg "></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-linkedin md:text-2xl text-lg "></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-facebook md:text-2xl text-lg "></i></li>
-          <li style={{display:'inline-block'}}><i className="fa-brands fa-x-twitter md:text-2xl text-lg"></i></li>
+          <li style={{display:'inline-block'}}><a href="https://www.instagram.com/immt.services/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram md:text-2xl text-lg cursor-pointer"></i></a></li>
+          <li style={{display:'inline-block'}}><a href="https://www.youtube.com/@innovativemettle"><i className="fa-brands fa-youtube md:text-2xl text-lg cursor-pointer"></i></a></li>
+          <li style={{display:'inline-block'}}><a href="https://www.linkedin.com/company/innovativemettle"><i className="fa-brands fa-linkedin md:text-2xl text-lg cursor-pointer"></i></a></li>
+          <li style={{display:'inline-block'}}><a href="https://www.facebook.com/innovativemettle"><i className="fa-brands fa-facebook md:text-2xl text-lg cursor-pointer"></i></a></li>
+          <li style={{display:'inline-block'}}><a href="https://x.com/innovativemettle"><i className="fa-brands fa-x-twitter md:text-2xl text-lg cursor-pointer"></i></a></li>
         </ul>  
       </div>     
         <div className='header-div' >

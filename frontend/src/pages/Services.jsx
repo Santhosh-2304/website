@@ -40,7 +40,7 @@ const Services = () => {
         Things (IoT), embedded systems, microprocessors, and intelligent automation.
         Through continuous experimentation and development, we design new products,
         tools, and platforms that address real-world challenges."
-        image="Corporate.jpg"
+        image="Research_Development.png"
         service='/research-development'
         />
     </div>
