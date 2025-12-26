@@ -60,7 +60,7 @@ export default function Header() {
           <li style={{display:'inline-block'}}><a href="https://www.instagram.com/immt.services/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram md:text-2xl text-lg cursor-pointer"></i></a></li>
           <li style={{display:'inline-block'}}><a href="https://www.youtube.com/@innovativemettle"><i className="fa-brands fa-youtube md:text-2xl text-lg cursor-pointer"></i></a></li>
           <li style={{display:'inline-block'}}><a href="https://www.linkedin.com/company/innovativemettle"><i className="fa-brands fa-linkedin md:text-2xl text-lg cursor-pointer"></i></a></li>
-          <li style={{display:'inline-block'}}><a href="https://www.facebook.com/innovativemettle"><i className="fa-brands fa-facebook md:text-2xl text-lg cursor-pointer"></i></a></li>
+          <li style={{display:'inline-block'}}><a href="https://www.facebook.com/profile.php?id=61585734925203"><i className="fa-brands fa-facebook md:text-2xl text-lg cursor-pointer"></i></a></li>
           <li style={{display:'inline-block'}}><a href="https://x.com/innovativemettle"><i className="fa-brands fa-x-twitter md:text-2xl text-lg cursor-pointer"></i></a></li>
         </ul>  
       </div>     

@@ -51,17 +51,19 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
           label: "Software and Technology Solutions",
           path: "/software-technology-solutions",
           children: [
-            { label: "Application Development" },
-            { label: "Managed IT Services" },
-            { label: "Consulting & Support" },
-            { label: "Digital Transformation" },
-            { label: "Cloud Solutions" },
-            { label: "Cybersecurity & Digital Forensics" },
+            { label: "Application Development", anchor: "application-development" },
+            { label: "Managed IT Services" ,anchor: "managed-it-services"},
+            { label: "Consulting & Support", anchor: "consulting-support" },
+            { label: "Digital Transformation", anchor: "digital-transformation" },
+            { label: "Cloud Solutions", anchor: "cloud-solutions" },
+            { label: "Cybersecurity & Digital Forensics", anchor: "cybersecurity-digital-forensics" },
           ],
+          singlePage: true
         },
         {
           label: "Research and Development",
           path: "/research-development",
+          
         },
       ],
     },
@@ -93,9 +95,20 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
       .replace(/[^\w\s-]/g, "")
       .replace(/\s+/g, "-");
 
-  const handleNavigate = (path) => {
+  const handleNavigate = (basePath, hash) => {
     onNavigate();
-    if (path && location.pathname !== path) navigate(path);
+    const full = hash ? `${basePath}#${hash}` : basePath;
+
+    // if navigating to section on SAME page
+    if (location.pathname === basePath && hash) {
+      navigate(full);
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 70);
+    } else {
+      navigate(full);
+    }
   };
 
   
@@ -120,108 +133,111 @@ export default function ServiceMenu({ isOpen, onToggle, onNavigate }) {
           height: `calc(100vh - ${headerHeight}px)`,
         }}
       >
-        <div className="h-full overflow-y-auto px-5 py-6">
+        <div className="h-full flex flex-col">
+          {/* header inside panel */}
+        <div className="h-full overflow-y-auto md:px-5 md:py-6 px-3 py-4">
           <ul className="space-y-6">
+            {menuData.map((parent, pIdx) => (
+              <li key={pIdx}>
+                {/* Parent */}
+                <div
+                  className="text-gray-900 font-semibold md:text-lg cursor-pointer hover:text-blue-600 "
+                  onClick={() =>
+                    parent.singlePage
+                      ? handleNavigate(parent.path, parent.defaultSection || "")
+                      : handleNavigate(parent.path)
+                  }
+                >
+                  {parent.label}
+                </div>
 
-            {menuData.map((parent, pIdx) => {
-              const parentKey = slug(parent.label);
-              const isParentOpen = openChild[parentKey];
+                {parent.children && (
+                  <ul className="mt-2 ml-3 space-y-2">
+                    {parent.children.map((child, cIdx) => {
+                      const childHasChildren = child.children?.length > 0;
 
-              return (
-                <li key={pIdx}>
-                 
-                  <div className="flex items-center">
-                    
-                    <button
-                      className="text-gray-900 font-medium text-left hover:text-blue-600 mr-2"
-                      onClick={() => handleNavigate(parent.path)}
-                    >
-                      {parent.label}
-                    </button>
+                      const key = slug(parent.label + "-" + child.label);
 
-                    
-                    {parent.children && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setOpenChild((prev) => ({
-                            ...prev,
-                            [parentKey]: !prev[parentKey],
-                          }));
-                        }}
-                      >
-                        <ArrowIcon open={isParentOpen} />
-                      </button>
-                    )}
-                  </div>
+                      const isOpen = openChild[key];
 
-                  
-                  {parent.children && (
-                    <ul
-                      className={`ml-3 mt-2 space-y-2 overflow-hidden transition-all duration-300
-                      ${isParentOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
-                    >
-                      {parent.children.map((child, cIdx) => {
-                        const childKey = slug(parent.label + "-" + child.label);
-                        const isChildOpen = openChild[childKey];
-                        const hasGrandChildren = child.children?.length > 0;
+                      const isAnchor =
+                        child.anchor || parent.singlePage || child.singlePage;
 
-                        return (
-                          <li key={cIdx}>
-                            
-                            <div className="flex items-center">
-                              
-                              {hasGrandChildren ? (
-                                <button
-                                  className="text-sm font-bold w-4"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setOpenChild((prev) => ({
-                                      ...prev,
-                                      [childKey]: !prev[childKey],
-                                    }));
-                                  }}
-                                >
-                                  {isChildOpen ? "–" : "+"}
-                                </button>
-                              ) : (
-                                <span className="w-4" />
-                              )}
+                      const anchorId = child.anchor || slug(child.label);
 
-                              
+                      return (
+                        <li key={cIdx}>
+
+                          {/* CHILD ROW */}
+                          <div className="flex ">
+                            {/* + or - icon */}
+                            {childHasChildren ? (
                               <button
-                                className="ml-2 text-gray-700 text-sm hover:text-blue-600 text-left"
-                                onClick={() => handleNavigate(child.path)}
+                                className="text-xl font-bold text-gray-700 cursor-pointer hover:text-blue-600"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setOpenChild((prev) => ({
+                                    ...prev,
+                                    [key]: !prev[key],
+                                  }));
+                                }}
                               >
-                                {child.label}
+                                {isOpen ? "–" : "+"}
                               </button>
-                            </div>
+                            ) : 
+                            <span className="w-3"></span>}
+                            <button
+                              className="text-gray-700 text-sm ml-2 hover:text-blue-600 text-left cursor-pointer"
+                              onClick={() =>
+                                handleNavigate(
+                                  child.path || parent.path,
+                                  isAnchor ? anchorId : ""
+                                )
+                              }
+                            >
+                               {child.label}
+                            </button>
 
-                           
-                            {hasGrandChildren && isChildOpen && (
-                              <ul className="ml-6 mt-2 space-y-1">
-                                {child.children.map((sub, sIdx) => (
+                            
+                          </div>
+
+                          {/* GRANDCHILDREN (collapsible) */}
+                          {childHasChildren && isOpen && (
+                            <ul className="ml-6 mt-2 space-y-1">
+                              {child.children.map((sub, sIdx) => {
+                                const isSubAnchor =
+                                  sub.anchor || child.singlePage || parent.singlePage;
+
+                                const subAnchorId = sub.anchor || slug(sub.label);
+
+                                return (
                                   <li key={sIdx}>
                                     <button
                                       className="text-gray-600 text-sm hover:text-blue-600 text-left"
-                                      onClick={() => handleNavigate(sub.path)}
+                                      onClick={() =>
+                                        handleNavigate(
+                                          sub.path || child.path || parent.path,
+                                          isSubAnchor ? subAnchorId : ""
+                                        )
+                                      }
                                     >
                                       - {sub.label}
                                     </button>
                                   </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
 
+              </li>
+            ))}
           </ul>
+            </div>
         </div>
       </aside>
     </>
