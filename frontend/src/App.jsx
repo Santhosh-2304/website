@@ -20,6 +20,8 @@ import AppDev from './pages/AppDev'
 import IT from './pages/IT'
 import Consulting from './pages/Consulting'
 import { Toaster } from "react-hot-toast";
+import IoT from './pages/IoT'
+import AI from './pages/AI'
 
 
 const App = () => {
@@ -52,6 +54,8 @@ const App = () => {
       <Route path='/software-technology-solutions' element={<SoftwareTechnology />} />
       <Route path='/research-development' element={<Research />} />
       <Route path='/fullstack' element={<FullStack />} />
+      <Route path='/iot' element={<IoT />} />
+      <Route path='/ai-ml' element={<AI />} />
       <Route path='/app-development' element={<AppDev />} />
       <Route path='/it' element={<IT />} />
       <Route path='/consulting' element={<Consulting />} />

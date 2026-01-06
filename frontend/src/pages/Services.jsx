@@ -6,12 +6,7 @@ const Services = () => {
     <div>
         <TitleBlock
         title="IMMT Services"
-        description="IMMT stands at the forefront of technology-based training and software solutions,
-        empowering individuals and organizations through immersive, hands-on learning and
-        advanced digital services. Our integrated programs and innovative tools are designed to
-        foster real-world expertise, fuel career growth, and drive operational excellence.
-        Experience an environment where cutting-edge technology meets practical education,
-        equipping you to thrive in an ever-evolving digital landscape."
+        description="At IMMT, we offer a comprehensive suite of services designed to empower individuals and organizations in the digital age. Our expertise spans Software Training Services, Software & Technology Solutions, and Research & Development. We are committed to delivering innovative solutions and hands-on training that drive growth, enhance skills, and foster technological advancement."
         image="training.jpg"
         />
     <div className='bg-blue-50 md:pl-10 md:pr-10 md:pt-5 p-2'>

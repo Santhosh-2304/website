@@ -2,7 +2,7 @@ import React from 'react'
 import TitleBlock from '../components/TitleBlock'
 const CorporateTraining = () => {
   return (
-    <div>
+    <>
       <TitleBlock 
         image="Corporate.jpg"
         title="Corporate Training"
@@ -15,8 +15,8 @@ const CorporateTraining = () => {
                     We also offer on-site, online, and hybrid training models to suit corporate
                     requirements"
       />
-
-    </div>
+      <div className='mb-77'></div>
+    </>
   )
 }
 

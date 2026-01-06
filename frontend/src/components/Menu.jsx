@@ -43,15 +43,19 @@ export default function HamburgerMenu({ isOpen, onToggle, onNavigate }) {
       },
       {
         label: "IoT",
+        path: "/iot",
         children:[
-          {label:"Embedded Systems"},
-          {label:"Rasberry Pi / Arduino Kits"}
-        ]
+          {label:"Rasberry Pi / Arduino Kits", anchor:"raspberry-pi-arduino-kits"},
+          {label:"Embedded Systems", anchor:"embedded-systems"},
+        ],
+        singlePage: true
       },
       {
-        label: "AI and ML",
-        path: "/research-development",
+        label: "AI/ML",
+        path: "/ai-ml",
+        singlePage: true
       },
+      
     ],
   },
 

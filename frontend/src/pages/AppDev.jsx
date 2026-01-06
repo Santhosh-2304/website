@@ -28,21 +28,21 @@ const AppDev = () => {
         We create custom apps that integrate seamlessly with your existing systems and support future enhancements.
         From concept to deployment, we ensure smooth project execution with agile methodologies.
         We also provide UI/UX design, testing, and maintenance to keep your app running flawlessly."
-        image="app.avif"
+        image="IOT.png"
     />
     
     <section id="desktop-app-development" className="scroll-section">
     <InfoBlock 
         title="Web Application Development"
         content="Our web application development services focus on building robust, secure, and high-performance web apps. We utilize modern frameworks and technologies to deliver solutions that meet your business objectives."  
-        image="IT.avif"
+        image="WebApp.jpg"
     />
     </section>
     <section id="enterprise-app-development" className="scroll-section">
     <InfoBlock 
         title="Enterprise Application Solutions"
         content="We provide enterprise application solutions that streamline operations, improve collaboration, and enhance productivity. Our solutions are designed to integrate seamlessly with your existing systems and workflows."  
-        image="IT.avif"
+        image="enterpise.jpg"
         reverse
     />
     </section>
@@ -50,7 +50,7 @@ const AppDev = () => {
     <InfoBlock
         title="Mobile Application Development"
         content="We design and develop mobile applications that are user-friendly, scalable, and tailored to your business needs. Our team leverages the latest technologies to create apps for iOS and Android platforms."
-        image="IT.avif"
+        image="MobileApp.jpg"
        
     />
     </section>
@@ -59,7 +59,7 @@ const AppDev = () => {
     <InfoBlock 
         title="Cloud Application Development"
         content="Leverage the power of the cloud with our cloud application development services. We build scalable and flexible cloud-based applications that enable your business to adapt and grow in a dynamic market."  
-        image="IT.avif"
+        image="cloud-app.webp"
         reverse
     />
     </section>
@@ -67,7 +67,7 @@ const AppDev = () => {
     <InfoBlock
         title="IoT Application Development"
         content="Our IoT application development services enable you to connect and manage devices seamlessly. We create innovative IoT solutions that drive automation, enhance data collection, and improve decision-making processes."
-        image="IT.avif"
+        image="IoT App.png"
         
     />
     </section>
