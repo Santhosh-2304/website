@@ -22,7 +22,7 @@ const courseList = [
   {
     title: "Software Development",
     description:
-      "Build fluency in languages like Python, .NET, Java, Angular, PHPq and JavaScript and evolve as they do.",
+      "Build fluency in languages like Python, .NET, Java, Angular, PHP and JavaScript and evolve as they do.",
   },
   {
     title: "Cloud + IT Ops",

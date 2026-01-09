@@ -22,13 +22,13 @@ const About = () => {
     <div className='md:mt-10 md:p-10 bg-gradient-to-r from-gray-200 to-blue-200 mt-4 p-4'>
     <ScrollAnimate>
     <div className='md:flex '>     
-      <div className='bg-gray-50 rounded-4xl shadow-xl  '>
-        <h1 className='text-2xl font-bold text-center mt-5 mb-5 '>Our Vision</h1>
+      <div className='bg-gray-50 rounded-4xl shadow-xl pb-2 '>
+        <h1 className='text-2xl font-bold text-center mt-5 md:mb-5 '>Our Vision</h1>
         <p className='text-center md:px-10 md:mb-10 md:text-lg px-4'>To be a global leader in IT services and training, empowering businesses and individuals to thrive in a rapidly evolving digital landscape through innovative solutions, cutting-edge technologies, and unparalleled expertise.</p>
       </div>
       
-      <div className='bg-gray-50 rounded-4xl shadow-xl md:ml-10 '>
-        <h1 className='text-2xl font-bold text-center mt-5 mb-5'>Our Mission</h1>
+      <div className='bg-gray-50 rounded-4xl shadow-xl md:ml-10 pb-2'>
+        <h1 className='text-2xl font-bold text-center md:mt-5 mt-4 md:mb-5'>Our Mission</h1>
         <p className='text-center md:px-10 md:mb-10 md:text-lg px-4 mb-5'>To deliver exceptional IT services and training programs that drive business growth and individual success. We are committed to fostering innovation, embracing emerging technologies, and cultivating a culture of continuous learning and excellence.</p>
       </div>
     </div>
